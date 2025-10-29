@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'RobotoMono-Italic';
+    src: url('../src/fonts/RobotoMono-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('../src/fonts/RobotoMono-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Spectral-ExtraBold';
+    src: url('../src/fonts/Spectral-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Spectral-ExtraBold-Italic';
+    src: url('../src/fonts/Spectral-ExtraBoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Spectral-ExtraLight';
+    src: url('../src/fonts/Spectral-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Spectral-ExtraLight-Italic';
+    src: url('../src/fonts/Spectral-ExtraLightItalic.ttf');
+}
+@font-face {
+    font-family: 'Spectral-Medium';
+    src: url('../src/fonts/Spectral-Medium.ttf');
+}
+@font-face {
+    font-family: 'Spectral-Medium-Italic';
+    src: url('../src/fonts/Spectral-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'ZalandoSans-Italic';
+    src: url('../src/fonts/ZalandoSansSemiExpanded-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'ZalandoSans';
+    src: url('../src/fonts/ZalandoSansSemiExpanded-VariableFont_wght.ttf');
+}
