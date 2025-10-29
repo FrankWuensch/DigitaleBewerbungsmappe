@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="w-full h-full">
+<html lang="de" class="w-full h-screen">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="{{site.baseurl}}../src/fonts.css">
     <link rel="stylesheet" href="{{site.baseurl}}../src/output.css"/>
   </head>
-  <body class="relative w-full h-full overflow-hidden">
+  <body class="relative w-full h-full min-h-screen overflow-hidden">
     {%if page.has_header%}
       {%include header.html%}
     {%endif%}
-    <div class="bg-blue-100 w-full h-full">
+    <div class="flex flex-row bg-white w-full h-full {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%}">
       {%if page.has_sidebar_left%}
-      <aside class="w-full max-w-max">
+      <aside class="max-2xl:hidden bg-blue-50 w-max max-w-max">
         {%include left_sidebar.html%}
       </aside>
       {%endif%}
-      <main class="relative mx-auto w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%}">
+      <main class="relative mx-auto pb-20 w-full max-w-6xl h-full overflow-hidden">
         {{content}}
       </main>      
       {%if page.has_sidebar_right%}
-      <aside class="w-full max-w-max">
+      <aside class="max-2xl:hidden bg-blue-50 w-max max-w-max">
         {%include right_sidebar.html%}
       </aside>
       {%endif%}
