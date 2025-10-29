@@ -6,29 +6,37 @@ body {
 }
 
 h1 {
-    @apply pb-4 xl:pb-8 font-['ZalandoSans'] text-yellow-700 text-2xl;
+    @apply pb-4 xl:pb-8 font-['ZalandoSans'] text-cyan-700 text-3xl;
 }
 
 h2 {
-    @apply font-['Spectral-ExtraBold'] text-lg;
+    @apply font-['ZalandoSans'] text-cyan-700 text-lg;
 }
 
 nav h2 {
-    @apply font-['ZalandoSans'] text-yellow-600 text-xl;
+    @apply font-['ZalandoSans'] text-cyan-600 text-xl;
 }
 
 nav h2.italic {
-    @apply font-['ZalandoSans-Italic'] text-yellow-500 text-xl;
+    @apply font-['ZalandoSans-Italic'] text-cyan-500 text-xl;
 }
 
 h3 {
     @apply font-['Spectral-ExtraBold'];
 }
 
-p {
-    @apply py-4 font-['Spectral-Medium'];
+div {
+    @apply font-['Spectral-Medium'];
 }
 
 .date {
-    @apply font-['RobotoMono'] text-xs;
+    @apply font-['Spectral-ExtraLight'];
+}
+
+.col-gap {
+    @apply my-8;
+}
+
+.sticky-title {
+    @apply top-0 sticky bg-sky-200 py-4 w-full;
 }

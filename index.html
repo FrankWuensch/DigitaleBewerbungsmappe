@@ -3,52 +3,55 @@ layout: default
 header_title_1: Frank Wünsch
 header_title_2: Digitale Bewerbungsmappe
 has_header: yes
+has_sidebar_left: yes
 head_title: Lebenslauf
 heading_1: Praktische Erfahrung
 heading_2: Fort-und Weiterbildung
 heading_3: Ausbildung
 ---
 
-<h1>{{page.head_title}}</h1>
-<div class="pb-12 xl:pb-24 w-full h-full overflow-y-auto">
-    <h2 class="top-0 sticky bg-amber-400 py-4 w-full">{{page.heading_1}}</h2>
+<div class="w-full h-full">
+  <h1>{{page.head_title}}</h1>
+  <div class="w-full h-full overflow-y-auto">
+    <h2 class="sticky-title">{{page.heading_1}}</h2>
     {%for comp in site.data.experiences.companies reversed%}
-        <div class="grid grid-cols-6 my-8 w-full">
-            <div class="grid col-span-1 date">
-                <div>{{comp.year}}</div>
-            </div>
-            <div class="grid col-span-5">
-                <h3>{{comp.name}}</h3>
-                <div>{{comp.company}}</div>
-                <div>{{comp.street}}</div>
-                <div>{{comp.city}}</div>
-            </div>
-        </div>
-    {%endfor%}
-    <h2 class="top-0 sticky bg-amber-400 py-4 w-full">{{page.heading_2}}</h2>
-    {%for ed in site.data.experiences.further_education reversed%}
-        <div class="grid grid-cols-6 my-8 w-full">
-            <div class="grid col-span-1 date">
-                <div>{{ed.year}}</div>
-            </div>
-            <div class="grid col-span-5">
-                <h3>{{ed.name}}</h3>
-                <div>{{ed.company}}</div>
-                <div>{{ed.street}}</div>
-                <div>{{ed.city}}</div>
-            </div>
-        </div>
-    {%endfor%}
-    <h2 class="top-0 sticky bg-amber-400 py-4 w-full">{{page.heading_3}}</h2>
-    <div class="grid grid-cols-6 my-8 w-full">
-        <div class="grid col-span-1 date">
-            <div>{{site.data.experiences.education[0].year}}</div>
-        </div>
-        <div class="grid col-span-5">
-            <h3>{{site.data.experiences.education[0].name}}</h3>
-            <div>{{site.data.experiences.education[0].company}}</div>
-            <div>{{site.data.experiences.education[0].street}}</div>
-            <div>{{site.data.experiences.education[0].city}}</div>
-        </div>
+    <div class="grid grid-cols-6 w-full col-gap">
+      <div class="grid col-span-1 date">
+        <div>{{comp.year}}</div>
+      </div>
+      <div class="grid col-span-5">
+        <h3>{{comp.name}}</h3>
+        <div>{{comp.company}}</div>
+        <div>{{comp.street}}</div>
+        <div>{{comp.city}}</div>
+      </div>
     </div>
+    {%endfor%}
+    <h2 class="sticky-title">{{page.heading_2}}</h2>
+    {%for ed in site.data.experiences.further_education reversed%}
+    <div class="grid grid-cols-6 w-full col-gap">
+      <div class="grid col-span-1 date">
+        <div>{{ed.year}}</div>
+      </div>
+      <div class="grid col-span-5">
+        <h3>{{ed.name}}</h3>
+        <div>{{ed.company}}</div>
+        <div>{{ed.street}}</div>
+        <div>{{ed.city}}</div>
+      </div>
+    </div>
+    {%endfor%}
+    <h2 class="sticky-title">{{page.heading_3}}</h2>
+    <div class="grid grid-cols-6 w-full col-gap">
+      <div class="grid col-span-1 date">
+        <div>{{site.data.experiences.education[0].year}}</div>
+      </div>
+      <div class="grid col-span-5">
+        <h3>{{site.data.experiences.education[0].name}}</h3>
+        <div>{{site.data.experiences.education[0].company}}</div>
+        <div>{{site.data.experiences.education[0].street}}</div>
+        <div>{{site.data.experiences.education[0].city}}</div>
+      </div>
+    </div>
+  </div>
 </div>

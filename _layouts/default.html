@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="w-full h-screen">
+<html lang="de" class="w-full h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,28 +7,25 @@
     <link rel="stylesheet" href="{{site.baseurl}}../src/fonts.css">
     <link rel="stylesheet" href="{{site.baseurl}}../src/output.css"/>
   </head>
-  <body class="flex flex-col w-full h-full overflow-hidden">
+  <body class="relative w-full h-full overflow-hidden">
     {%if page.has_header%}
-    <header class="relative w-full">
-        {%include header.html%}
-    </header>
+      {%include header.html%}
     {%endif%}
-
-    <main class="flex-1 bg-blue-100 mx-auto {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%} w-full max-w-6xl h-full">
+    <div class="bg-blue-100 w-full h-full">
       {%if page.has_sidebar_left%}
-      <section>
+      <aside class="w-full max-w-max">
         {%include left_sidebar.html%}
-      </section>
+      </aside>
       {%endif%}
-      
+      <main class="relative mx-auto w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%}">
+        {{content}}
+      </main>      
       {%if page.has_sidebar_right%}
-      <section>
+      <aside class="w-full max-w-max">
         {%include right_sidebar.html%}
-      </section>
+      </aside>
       {%endif%}
-      {{content}}
-    </main>
-
+    </div>
     {%if page.has_footer%}
     <footer>
         {%include footer.html%}
