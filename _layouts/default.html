@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frank Wünsch</title>
+    <link href="../src/output.css" rel="stylesheet" />
+  </head>
+  <body class="w-full h-full">
+    {%if site.has_header%}
+    <header>
+        {%include "header.html"%}
+    </header>
+    {%endif%}
+
+    <main>
+      {%if site.has_sidebar_left%}
+      <section>
+        {%include "left_sidebar.html"%}
+      </section>
+      {%endif%} 
+      
+      {%if site.has_sidebar_right%}
+      <section>
+        {%include "right_sidebar.html"%}
+      </section>
+      {%endif%}
+    </main>
+
+    {%if site.has_footer%}
+    <footer>
+        {%include "footer.html"%}
+    </footer>
+    {%endif%}
+  </body>
+</html>
