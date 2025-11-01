@@ -31,6 +31,9 @@ companies:
     company: "Metabowerke GmbH & Co. KG"
     city: "72622 Nürtingen"
     street: "Metabo-Allee 1"
+    info: >-
+      Baugruppenmontage Winkelschleifer, Montage versch. Bohrmaschinen und
+      Verpacken versch. Maschinen
   - name: "Industriemechaniker"
     year: "01/2016 - 08/2017"
     company: "EFAS Elektrofahrzeuge-Stuttgart GmbH"

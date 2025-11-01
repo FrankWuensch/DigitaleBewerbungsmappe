@@ -1,5 +1,12 @@
-phone: +49 176 78926904
-mail: wuensch.frank@web.de
-github_name: FrankWuensch
-city: 73230 Kirchheim/Teck
-street: Zementstr. 1/1
+- label: phone
+  value: "+49 176 78926904"
+  icon: "src/symbols/phone.svg"
+- label: mail
+  value: "[wuensch.frank@web.de](mailto:wuensch.frank@web.de)"
+  icon: "src/symbols/mail.svg"
+- label: github
+  value: "[Github-Account](https://github.com/FrankWuensch)"
+  icon: "src/symbols/github.svg"
+- label: address
+  value: "Zementstr. 1/1, 73230 Kirchheim/Teck"
+  icon: "src/symbols/address.svg"

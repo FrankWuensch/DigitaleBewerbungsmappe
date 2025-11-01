@@ -4,32 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{page.title}}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}../src/fonts.css">
-    <link rel="stylesheet" href="{{site.baseurl}}../src/output.css"/>
+    <link rel="stylesheet" href="{{site.baseurl}}../src/fonts.css" />
+    <link rel="stylesheet" href="{{site.baseurl}}../src/output.css" />
   </head>
   <body class="relative w-full h-full min-h-screen overflow-hidden">
-    {%if page.has_header%}
-      {%include header.html%}
-    {%endif%}
-    <div class="flex flex-row bg-white w-full h-full {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%}">
-      {%if page.has_sidebar_left%}
-      <aside class="max-2xl:hidden bg-blue-50 w-max max-w-max">
+    {%if page.has_header%} {%include header.html%} {%endif%}
+    <div
+      class="flex flex-row bg-white w-full h-full {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%}"
+    >
+      <aside
+        class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mr-4"
+      >
         {%include left_sidebar.html%}
       </aside>
-      {%endif%}
-      <main class="relative mx-auto pb-20 w-full max-w-6xl h-full overflow-hidden">
+      <main
+        class="relative mx-auto pb-20 pl-8 w-full max-w-6xl h-full overflow-hidden"
+      >
         {{content}}
-      </main>      
-      {%if page.has_sidebar_right%}
-      <aside class="max-2xl:hidden bg-blue-50 w-max max-w-max">
-        {%include right_sidebar.html%}
+      </main>
+      <aside
+        class="max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 ml-4"
+      >
+        {%include left_sidebar.html%}
       </aside>
-      {%endif%}
     </div>
     {%if page.has_footer%}
-    <footer>
-        {%include footer.html%}
-    </footer>
+    <footer>{%include footer.html%}</footer>
     {%endif%}
   </body>
 </html>

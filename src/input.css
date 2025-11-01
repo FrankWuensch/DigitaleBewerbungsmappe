@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 body {
     @apply font-['Spectral-ExtraLight'] text-neutral-700 text-base;
 }
@@ -10,15 +9,19 @@ h1 {
 }
 
 h2 {
-    @apply font-['ZalandoSans'] text-cyan-700 text-lg;
+    @apply font-['ZalandoSans'] text-neutral-700 text-lg;
 }
 
 nav h2 {
-    @apply font-['ZalandoSans'] text-cyan-600 text-xl;
+    @apply px-8 font-['ZalandoSans'] text-yellow-600 text-xl;
+}
+
+aside h2 {
+    @apply text-inherit;
 }
 
 nav h2.italic {
-    @apply font-['ZalandoSans-Italic'] text-cyan-500 text-xl;
+    @apply font-['ZalandoSans-Italic'] text-amber-500 text-xl;
 }
 
 h3 {
@@ -27,6 +30,18 @@ h3 {
 
 div {
     @apply font-['Spectral-Medium'];
+}
+
+a {
+    @apply underline underline-offset-1 cursor-pointer;
+}
+
+details {
+    @apply pt-4 pb-2;
+}
+
+article {
+    @apply bg-amber-50 mr-48 p-4 rounded-2xl text-inherit;
 }
 
 .date {
@@ -38,5 +53,9 @@ div {
 }
 
 .sticky-title {
-    @apply top-0 sticky bg-sky-200 py-4 w-full;
+    @apply top-0 sticky bg-amber-200 p-4 w-full text-center;
+}
+
+.bg-sidebar {
+    @apply bg-sky-900;
 }

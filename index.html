@@ -4,7 +4,8 @@ header_title_1: Frank Wünsch
 header_title_2: Digitale Bewerbungsmappe
 has_header: yes
 has_sidebar_left: yes
-has_sidebar_right: yes
+has_sidebar_right: no
+heading_sidebar_left: Persönliche Daten
 head_title: Lebenslauf
 heading_1: Praktische Erfahrung
 heading_2: Fort-und Weiterbildung
@@ -25,6 +26,12 @@ heading_3: Ausbildung
         <div>{{comp.company}}</div>
         <div>{{comp.street}}</div>
         <div>{{comp.city}}</div>
+        {%if comp.info%}
+          <details>
+            <summary>Tätigkeitsbeschreibung</summary>
+            <article>{{comp.info}}</article>
+          </details>
+        {%endif%}
       </div>
     </div>
     {%endfor%}
