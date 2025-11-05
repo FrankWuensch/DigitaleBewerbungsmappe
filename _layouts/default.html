@@ -11,7 +11,7 @@
   <body class="relative w-full h-full min-h-screen overflow-hidden">
     {%if page.has_header%} {%include header.html%} {%endif%}
     <div
-      class="flex flex-row bg-white w-full h-full {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
+      class="flex flex-row bg-white mb-24 xl:mb-40 w-full h-full {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
     >
       <aside
         class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mr-4"
@@ -20,7 +20,7 @@
       </aside>
       <main
         id="content"
-        class="relative mx-auto pb-20 pl-8 w-full max-w-6xl h-full overflow-hidden"
+        class="relative mx-auto max-xl:pb-24 pl-8 w-full max-w-6xl h-full overflow-hidden"
       >
         {{content}}
       </main>
@@ -43,7 +43,7 @@
     </div>
     <aside
       id="left-sidebar-small"
-      class="hidden max-xl:block top-1/2 left-0 fixed bg-blue bg-sidebar opacity-0 w-2/3 h-2/3 -translate-y-1/2 transform"
+      class="hidden max-xl:block top-1/2 left-0 fixed bg-blue bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 -translate-y-1/2 transform"
     >
       {%include left_sidebar.html%}
     </aside>
