@@ -10,17 +10,15 @@
   </head>
   <body class="relative w-full h-full">
     {%if page.has_header%} {%include header.html%} {%endif%}
-    <div
-      class="flex flex-row bg-white w-full h-full"
-    >
+    <div class="flex flex-row bg-white w-full h-full">
       <aside
-        class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1"
+        class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mt-20 xl:mt-40"
       >
         {%include left_sidebar.html%}
       </aside>
       <main
         id="content"
-        class="relative mx-auto px-8 pb-24 xl:pb-40 xl:pl-8 w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
+        class="relative xl:mx-auto px-8 pb-24 xl:pb-40 max-xl:pl-8 w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
       >
         {{content}}
       </main>
@@ -33,17 +31,17 @@
     {%if page.has_footer%}
     <footer>{%include footer.html%}</footer>
     {%endif%}
-    <div
-      id="button-contact-data"
-      class="hidden max-xl:block bottom-5 left-1/2 z-10 fixed bg-amber-500 px-8 py-3 rounded-lg min-w-max text-lg -translate-x-1/2 transform"
-    >
-      <p class="flex justify-center items-center w-full">
+    <div class="bottom-0 left-0 z-10 fixed bg-transparent w-full h-24">
+      <div
+        id="button-contact-data"
+        class="hidden max-xl:block bg-amber-500 mx-auto my-auto px-8 py-3 rounded-lg w-fit text-lg translate-y-1/2"
+      >
         {{page.contact_data}}
-      </p>
+      </div>
     </div>
     <aside
       id="left-sidebar-small"
-      class="hidden max-xl:block top-1/2 left-0 fixed bg-blue bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 -translate-y-1/2 transform"
+      class="hidden max-xl:block top-1/2 left-0 fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 -translate-y-1/2 transform"
     >
       {%include left_sidebar.html%}
     </aside>
