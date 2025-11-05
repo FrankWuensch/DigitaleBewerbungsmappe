@@ -3,7 +3,7 @@
   {%for data in site.data.personal%}
   <div class="grid grid-cols-5 py-2 w-fill">
     <div class="col-span-1 {%if data.icon%} block {%else%} opacity-0 {%endif%}">
-      {%svg "{{site.baseurl}}{{data.icon}}" class="text-amber-200"%}
+      {%svg {{data.icon}} class="text-amber-200"%}
     </div>
     {%if data.value contains "https://" or data.value contains "mailto"%}
     <div class="col-span-4">{{data.value | markdownify}}</div>
