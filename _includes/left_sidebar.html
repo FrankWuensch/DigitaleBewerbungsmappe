@@ -13,7 +13,7 @@
       {%svg {{data.icon}} class="text-amber-200"%}
     </div>
     {%if data.value contains "https://" or data.value contains "mailto"%}
-    <div class="col-span-4">{{data.value | markdownify}}</div>
+    <div class="col-span-4 pointer-events-auto">{{data.value | markdownify}}</div>
     {%else%}
     <div class="col-span-4">{{data.value}}</div>
     {%endif%}
