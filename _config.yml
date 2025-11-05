@@ -21,7 +21,8 @@
 title: Digitale Bewerbungsmappe - Frank Wünsch
 email: wuensch.frank@web.de
 description: >- # this means to ignore newlines until "baseurl:"
-  
+  Hier steht eine Beschreibung
+  über mehrere Zeilen hinweg...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  FrankWuensch
