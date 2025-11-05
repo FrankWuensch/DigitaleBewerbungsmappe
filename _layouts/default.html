@@ -6,11 +6,12 @@
     <title>{{page.title}}</title>
     <link rel="stylesheet" href="{{site.baseurl}}/src/fonts.css" />
     <link rel="stylesheet" href="{{site.baseurl}}/src/output.css" />
+    <script src="{{site.baseurl}}/src/js/show_hide_sidebar.js"></script>
   </head>
   <body class="relative w-full h-full min-h-screen overflow-hidden">
     {%if page.has_header%} {%include header.html%} {%endif%}
     <div
-      class="flex flex-row bg-white w-full h-full {%if page.has_header%} pt-48 {%else%} pt-8 {%endif%}"
+      class="flex flex-row bg-white w-full h-full {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
     >
       <aside
         class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mr-4"
@@ -18,10 +19,26 @@
         {%include left_sidebar.html%}
       </aside>
       <main
+        id="content"
         class="relative mx-auto pb-20 pl-8 w-full max-w-6xl h-full overflow-hidden"
       >
         {{content}}
       </main>
+      <div class="bottom-0 left-0 z-0 fixed bg-transparent backdrop-blur-sm w-full h-20 text-lg"></div>
+      <div
+        id="button-contact-data"
+        class="hidden max-xl:block bottom-5 left-1/2 z-10 fixed bg-amber-500 px-8 py-3 rounded-lg min-w-max text-lg -translate-x-1/2 transform"
+      >
+        <p class="flex justify-center items-center w-full">
+          {{page.contact_data}}
+        </p>
+      </div>
+      <aside
+        id="left-sidebar-small"
+        class="hidden max-xl:block top-1/2 left-0 fixed bg-blue bg-sidebar opacity-0 w-2/3 h-2/3 -translate-y-1/2 transform"
+      >
+        {%include left_sidebar.html%}
+      </aside>
       <aside
         class="max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 ml-4"
       >

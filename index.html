@@ -10,6 +10,8 @@ head_title: Lebenslauf
 heading_1: Praktische Erfahrung
 heading_2: Fort-und Weiterbildung
 heading_3: Ausbildung
+summary_1: Tätigkeitsbeschreibung
+contact_data: Kontaktdaten
 ---
 
 <div class="w-full h-full">
@@ -17,31 +19,41 @@ heading_3: Ausbildung
   <div class="w-full h-full overflow-y-auto">
     <h2 class="sticky-title">{{page.heading_1}}</h2>
     {%for comp in site.data.experiences.companies reversed%}
-    <div class="grid grid-cols-6 w-full col-gap">
-      <div class="grid col-span-1 date">
+    <div class="grid grid-cols-5 xl:grid-cols-6 w-full col-gap">
+      <div class="grid col-span-2 xl:col-span-1 date">
         <div>{{comp.year}}</div>
       </div>
-      <div class="grid col-span-5">
+      <div class="grid col-span-3 xl:col-span-5">
         <h3>{{comp.name}}</h3>
         <div>{{comp.company}}</div>
         <div>{{comp.street}}</div>
         <div>{{comp.city}}</div>
-        {%if comp.info%}
+        <div class="max-xl:hidden">
+          {%if comp.info%}
           <details>
-            <summary>Tätigkeitsbeschreibung</summary>
+            <summary>{{page.summary_1}}</summary>
             <article>{{comp.info}}</article>
           </details>
+          {%endif%}
+        </div>
+      </div>
+      <div class="max-xl:block col-span-full">
+        {%if comp.info%}
+        <details class="w-full">
+          <summary>{{page.summary_1}}</summary>
+          <article>{{comp.info}}</article>
+        </details>
         {%endif%}
       </div>
     </div>
     {%endfor%}
     <h2 class="sticky-title">{{page.heading_2}}</h2>
     {%for ed in site.data.experiences.further_education reversed%}
-    <div class="grid grid-cols-6 w-full col-gap">
-      <div class="grid col-span-1 date">
+    <div class="grid grid-cols-5 xl:grid-cols-6 w-full col-gap">
+      <div class="grid col-span-2 xl:col-span-1 date">
         <div>{{ed.year}}</div>
       </div>
-      <div class="grid col-span-5">
+      <div class="grid col-span-3 xl:col-span-5">
         <h3>{{ed.name}}</h3>
         <div>{{ed.company}}</div>
         <div>{{ed.street}}</div>
@@ -50,11 +62,11 @@ heading_3: Ausbildung
     </div>
     {%endfor%}
     <h2 class="sticky-title">{{page.heading_3}}</h2>
-    <div class="grid grid-cols-6 w-full col-gap">
-      <div class="grid col-span-1 date">
+    <div class="grid grid-cols-5 xl:grid-cols-6 w-full col-gap">
+      <div class="grid col-span-2 xl:col-span-1 date">
         <div>{{site.data.experiences.education[0].year}}</div>
       </div>
-      <div class="grid col-span-5">
+      <div class="grid col-span-3 xl:col-span-5">
         <h3>{{site.data.experiences.education[0].name}}</h3>
         <div>{{site.data.experiences.education[0].company}}</div>
         <div>{{site.data.experiences.education[0].street}}</div>

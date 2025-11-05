@@ -5,15 +5,15 @@ body {
 }
 
 h1 {
-    @apply pb-4 xl:pb-8 font-['ZalandoSans'] text-cyan-700 text-3xl;
+    @apply pb-4 xl:pb-8 font-['ZalandoSans'] text-cyan-700 text-xl xl:text-3xl;
 }
 
 h2 {
-    @apply font-['ZalandoSans'] text-neutral-700 text-lg;
+    @apply font-['ZalandoSans'] xl:font-normal font-bold text-neutral-700 text-base xl:text-lg;
 }
 
 nav h2 {
-    @apply px-8 font-['ZalandoSans'] text-yellow-600 text-xl;
+    @apply px-4 xl:px-8 font-['ZalandoSans'] xl:font-normal font-bold text-yellow-600 text-base xl:text-xl;
 }
 
 aside h2 {
@@ -21,7 +21,7 @@ aside h2 {
 }
 
 nav h2.italic {
-    @apply font-['ZalandoSans-Italic'] text-amber-500 text-xl;
+    @apply font-['ZalandoSans-Italic'] xl:font-normal font-bold text-amber-500 text-base xl:text-xl;
 }
 
 h3 {
@@ -41,7 +41,7 @@ details {
 }
 
 article {
-    @apply bg-amber-50 mr-48 p-4 rounded-2xl text-inherit;
+    @apply bg-amber-50 mr-16 xl:mr-48 p-4 rounded-2xl text-inherit;
 }
 
 .date {
