@@ -1,10 +1,9 @@
 FROM jekyll/builder:latest
 
-# Installiere Python und pip (bzw. python3-pip)
-RUN apt-get update && apt-get install -y python3-pip
+# Python und pip über apk (Alpine Paketmanager) installieren
+RUN apk add --no-cache python3 py3-pip
 
-# Optional: Arbeitsverzeichnis setzen
-WORKDIR /app
+WORKDIR /srv/jekyll
 
-# Standardkommando
 CMD ["bash"]
+
