@@ -12,7 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run -v ${{ github.workspace }}:/app my-jekyll-python /bin/bash -c "pip install -r requirements.txt && jekyll build"
+  - uses: actions/checkout@v4
+  
+  # Image bauen
+  - name: Build my-jekyll-python image
+    run: docker build -t my-jekyll-python .
+
+  # Container aus lokalem Image starten
+  - name: Run container and build site
+    run: docker run -v ${{ github.workspace }}:/app my-jekyll-python /bin/bash -c "pip install -r requirements.txt && jekyll build"
+
