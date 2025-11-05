@@ -24,21 +24,6 @@
       >
         {{content}}
       </main>
-      <div class="bottom-0 left-0 z-0 fixed bg-transparent backdrop-blur-sm w-full h-20 text-lg"></div>
-      <div
-        id="button-contact-data"
-        class="hidden max-xl:block bottom-5 left-1/2 z-10 fixed bg-amber-500 px-8 py-3 rounded-lg min-w-max text-lg -translate-x-1/2 transform"
-      >
-        <p class="flex justify-center items-center w-full">
-          {{page.contact_data}}
-        </p>
-      </div>
-      <aside
-        id="left-sidebar-small"
-        class="hidden max-xl:block top-1/2 left-0 fixed bg-blue bg-sidebar opacity-0 w-2/3 h-2/3 -translate-y-1/2 transform"
-      >
-        {%include left_sidebar.html%}
-      </aside>
       <aside
         class="max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 ml-4"
       >
@@ -48,5 +33,23 @@
     {%if page.has_footer%}
     <footer>{%include footer.html%}</footer>
     {%endif%}
+    <div
+      id="button-contact-data"
+      class="hidden max-xl:block bottom-5 left-1/2 z-10 fixed bg-amber-500 px-8 py-3 rounded-lg min-w-max text-lg -translate-x-1/2 transform"
+    >
+      <p class="flex justify-center items-center w-full">
+        {{page.contact_data}}
+      </p>
+    </div>
+    <aside
+      id="left-sidebar-small"
+      class="hidden max-xl:block top-1/2 left-0 fixed bg-blue bg-sidebar opacity-0 w-2/3 h-2/3 -translate-y-1/2 transform"
+    >
+      {%include left_sidebar.html%}
+    </aside>
+    <div
+      id="blurred"
+      class="xl:hidden max-xl:block bottom-0 left-0 z-0 fixed bg-transparent backdrop-blur-sm w-full h-24 text-lg"
+    ></div>
   </body>
 </html>

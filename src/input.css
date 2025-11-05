@@ -49,11 +49,11 @@ article {
 }
 
 .col-gap {
-    @apply my-8;
+    @apply my-4 xl:my-8;
 }
 
 .sticky-title {
-    @apply top-0 sticky bg-amber-200 p-4 w-full text-center;
+    @apply top-0 sticky flex justify-center items-center bg-amber-200 p-2 xl:p-4 w-full;
 }
 
 .bg-sidebar {

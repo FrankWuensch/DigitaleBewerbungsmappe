@@ -1,5 +1,12 @@
-<div class="flex flex-col px-8 pt-20 min-w-min max-w-80 h-full text-white">
-  <h2 class="pb-10">{{page.heading_sidebar_left}}</h2>
+<div
+  class="flex flex-col xl:mx-auto px-8 pt-12 xl:pt-20 min-w-min max-w-80 h-full text-white"
+>
+  <img
+    src="{{site.baseurl}}/src/images/personalImage.png"
+    alt="Bild Frank Wünsch"
+    class="pb-8 w-full max-w-40 xl:max-w-52"
+  />
+  <h2 class="pb-4 xl:pb-10">{{page.heading_sidebar_left}}</h2>
   {%for data in site.data.personal%}
   <div class="grid grid-cols-5 py-2 w-fill">
     <div class="col-span-1 {%if data.icon%} block {%else%} opacity-0 {%endif%}">
