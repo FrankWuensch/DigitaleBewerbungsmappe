@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    @apply font-['Spectral-ExtraLight'] text-neutral-700 text-base;
+    @apply font-['Spectral-ExtraLight'] text-neutral-700 text-sm xl:text-base;
 }
 
 h1 {

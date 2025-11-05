@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="w-full h-screen">
+<html lang="de" class="w-full h-screen max-h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="{{site.baseurl}}/src/output.css" />
     <script src="{{site.baseurl}}/src/js/show_hide_sidebar.js"></script>
   </head>
-  <body class="relative w-full h-full min-h-screen overflow-hidden">
+  <body class="relative w-full h-full">
     {%if page.has_header%} {%include header.html%} {%endif%}
     <div
-      class="flex flex-row bg-white mb-24 xl:mb-40 w-full h-full {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
+      class="flex flex-row bg-white w-full h-full"
     >
       <aside
-        class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mr-4"
+        class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1"
       >
         {%include left_sidebar.html%}
       </aside>
       <main
         id="content"
-        class="relative mx-auto max-xl:pb-24 pl-8 w-full max-w-6xl h-full overflow-hidden"
+        class="relative mx-auto px-8 pb-24 xl:pb-40 xl:pl-8 w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
       >
         {{content}}
       </main>
       <aside
-        class="max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 ml-4"
+        class="max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1"
       >
         {%include left_sidebar.html%}
       </aside>
@@ -47,9 +47,5 @@
     >
       {%include left_sidebar.html%}
     </aside>
-    <div
-      id="blurred"
-      class="xl:hidden max-xl:block bottom-0 left-0 z-0 fixed bg-transparent backdrop-blur-sm w-full h-24 text-lg"
-    ></div>
   </body>
 </html>
