@@ -11,6 +11,7 @@ heading_1: Praktische Erfahrung
 heading_2: Fort-und Weiterbildung
 heading_3: Ausbildung
 summary_1: Tätigkeitsbeschreibung
+summary_2: Lerninhalte
 contact_data: Kontaktdaten
 ---
 
@@ -27,20 +28,32 @@ contact_data: Kontaktdaten
       <div>{{comp.company}}</div>
       <div>{{comp.street}}</div>
       <div>{{comp.city}}</div>
-      <div class="max-xl:hidden">
+      <div class="max-xl:hidden -mt-1">
         {%if comp.info%}
         <details>
           <summary>{{page.summary_1}}</summary>
-          <article>{{comp.info}}</article>
+          <article>
+            <ul class="hyphens-auto list-none company" lang="de">
+              {%for item in comp.info%}
+              <li>{{item | markdownify}}</li>
+              {%endfor%}
+            </ul>
+          </article>
         </details>
         {%endif%}
       </div>
     </div>
-    <div class="hidden max-xl:block col-span-full">
+    <div class="hidden max-xl:block col-span-full -mt-3 hyphens-auto" lang="de">
       {%if comp.info%}
       <details class="w-full">
         <summary>{{page.summary_1}}</summary>
-        <article>{{comp.info}}</article>
+        <article>
+          <ul class="hyphens-auto list-none company" lang="de">
+            {%for item in comp.info%}
+            <li>{{item | markdownify}}</li>
+            {%endfor%}
+          </ul>
+        </article>
       </details>
       {%endif%}
     </div>
@@ -57,6 +70,34 @@ contact_data: Kontaktdaten
       <div>{{ed.company}}</div>
       <div>{{ed.street}}</div>
       <div>{{ed.city}}</div>
+      <div class="max-xl:hidden -mt-1">
+        {%if ed.info%}
+        <details>
+          <summary>{{page.summary_2}}</summary>
+          <article>
+            <ul class="list-none">
+              {%for item in ed.info%}
+              <li>{{item | markdownify}}</li>
+              {%endfor%}
+            </ul>
+          </article>
+        </details>
+        {%endif%}
+      </div>
+    </div>
+    <div class="hidden max-xl:block col-span-full -mt-3 hyphens-auto" lang="de">
+      {%if ed.info%}
+      <details class="w-full">
+        <summary>{{page.summary_2}}</summary>
+        <article>
+          <ul class="hyphens-auto list-none" lang="de">
+            {%for item in ed.info%}
+            <li>{{item | markdownify}}</li>
+            {%endfor%}
+          </ul>
+        </article>
+      </details>
+      {%endif%}
     </div>
   </div>
   {%endfor%}

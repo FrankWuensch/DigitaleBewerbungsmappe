@@ -15,42 +15,89 @@ further_education:
     company: "ILS Institut für Lernsysteme GmbH"
     city: "22143 Hamburg"
     street: "Doberaner Weg 18-22"
+    info: |
+      - Aufbau und Funktionsweise von speicherprogrammierbaren Steuerungen
+      - Logische Verknüpfungen und Speicherverhalten
+      - Zeitverhalten und Zählvorgändige
+      - Entwurfsverfahren, basierend auf dem Programmiersystem STEP7
+      - Ablaufdiagramme und Steuerungssicherheit
+      - Wortverarbeitung mit SPS in der Mess- und Regelungstechnik
+      - Realisierung von regelungstechnischen Aufgaben mit TrySim
   - name: "Geprüfter C++ Programmierer ILS"
     year: "01/2021 - 02/2022"
     company: "ILS Institut für Lernsysteme GmbH"
     city: "22143 Hamburg"
     street: "Doberaner Weg 18-22"
+    info: |
+      - Programmaufbau, Operatoren, Schleifen
+      - Variablen, Speicherverwaltung, Modulare Programmierung
+      - Objektorientierte Programmierung, Qt-Klassenbibliothek
+      - GUI-Entwicklung und Widgets
+      - Fehlersuche und Ausnahmebehandlung
+      - Datenbankprogrammierung
+      - Programmierprojekte: Multimedia-Player, Memory-Spiel
+      - mobile Anwendungen
   - name: "Python Programmierer Datascience und Machine Learning"
     year: "03/2023 - 07/2024"
     company: "ILS Institut für Lernsysteme GmbH"
     city: "22143 Hamburg"
     street: "Doberaner Weg 18-22"
+    info: |
+      - Anaconda-Installation und erste Schritte mit Python
+      - Objektorientierung, Listen und Datenstrukturen
+      - Ausnahmebehandlung, Dateiverarbeitung und Modularisierung
+      - Numerisches Python mit NumPy
+      - Datenvisualisierung mit Matplotlib
+      - Datenverarbeitung mit pandas
+      - Statistik und Wahrscheinlichkeitsrechnungen mit Python
+      - Big Data und Data Science
+      - Machine Learning und Künstliche Intelligenz
 companies:
   - name: "Industriemechaniker"
     year: "01/2015 - 01/2016"
     company: "Metabowerke GmbH & Co. KG"
     city: "72622 Nürtingen"
     street: "Metabo-Allee 1"
-    info: >-
-      Baugruppenmontage Winkelschleifer, Montage versch. Bohrmaschinen und
-      Verpacken versch. Maschinen
+    info: |
+      - Baugruppenmontage Winkelschleifer
+      - Montage versch. Bohrmaschinen
+      - Verpacken versch. Maschinen
   - name: "Industriemechaniker"
     year: "01/2016 - 08/2017"
     company: "EFAS Elektrofahrzeuge-Stuttgart GmbH"
     city: "73119 Zell unter Aichelberg"
     street: "Raubisstr. 1"
+    info: |
+      - Montage und Verkabelung von E-Boxen für UPS Fahrzeuge, die von Dieselmotoren auf reine Elektroantriebe umgerüstet wurden
+      - Brücken auflegen an den Batteriekästen
+      - Unterstützung bei Probefahrten
   - name: "Anlagenmonteur"
     year: "06/2020 - 03/2022"
     company: "Electronics GmbH"
     city: "73765 Neuhausen auf den Fildern"
     street: "Kirchstr. 53"
+    info: |
+      - Aufbau und Montage von Messsystemen für den Aluminium-Druckgussbereich
+      inklusive Einlernen der Kunden vor Ort in die Messsoftware
+      - mehrere Auslandseinsätze in den Ländern Frankreich, Tschechien und Italien
+      - Fehlerbehebung und Unterstützung der Kunden per Fernwartung
   - name: "Software-Entwickler"
     year: "04/2022 - 12/2024"
     company: "pragmatic industries GmbH"
     city: "73230 Kirchheim/Teck"
     street: "Jesingerstr. 57"
+    info: |
+      - Entwicklung von Webanwendungen mit Datenbankanbindungen
+      - Vorbereiten von Bild-Datensätzen für KI Anwendungen mit Objekterkennung
+      - Code-Korrekturen in Django-Projekten mit Python3
+      - Umsetzung der Gestaltung der Webseiten mit HTML5, TailwindCSS, JavaScript / TypeScript und HTMX
   - name: "SPS Programmierer"
     year: "02/2025 - 06/2025"
     company: "FujiSeal Germany GmbH"
     city: "72631 Aichtal-Aich"
     street: "Gutenbergstr. 9"
+    info: |
+      - Eigenständige Entwicklung von SPS Programmen im Sondermaschinenbau mit anschließender Inbetriebnahme vor Ort (FATs)
+      - Fehlersuche elektrisch
+      - Durchführung von Fehlerbehebungen elektrisch und im SPS Programm
+      - Umsetzung neuer Kundenvorgaben in enger Abstimmung mit den Kunden

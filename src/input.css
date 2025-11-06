@@ -40,8 +40,20 @@ details {
     @apply pt-4 pb-2;
 }
 
+summary {
+    @apply cursor-pointer;
+}
+
 article {
-    @apply bg-amber-50 mr-16 xl:mr-48 p-4 rounded-2xl text-inherit;
+    @apply bg-amber-50 mr-8 xl:mr-48 p-4 rounded-2xl text-inherit;
+}
+
+ul ul {
+    @apply list-decimal list-inside;
+}
+
+ul.company ul {
+    @apply list-disc list-inside;
 }
 
 .date {
@@ -57,5 +69,5 @@ article {
 }
 
 .bg-sidebar {
-    @apply bg-sky-900;
+    @apply bg-cyan-800;
 }
