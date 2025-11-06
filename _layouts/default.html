@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="{{site.baseurl}}/src/output.css" />
     <script src="{{site.baseurl}}/src/js/show_hide_sidebar.js"></script>
     <script src="{{site.baseurl}}/src/js/details_handling.js"></script>
+    <style>
+      details summary::after {
+        content: url("{{site.baseurl}}/src/symbols/arrow_down.svg");
+        padding-left: 1rem;
+        margin-top: 0.4rem;
+        display: inline-block;
+      }
+      details[open] summary::after {
+        content: url("{{site.baseurl}}/src/symbols/arrow_up.svg");
+      }
+    </style>
   </head>
   <body class="relative w-full h-full select-none">
     {%if page.has_header%} {%include header.html%} {%endif%}
@@ -32,7 +43,9 @@
     {%if page.has_footer%}
     <footer>{%include footer.html%}</footer>
     {%endif%}
-    <div class="hidden max-xl:block bottom-0 left-0 z-10 fixed bg-transparent w-full h-24">
+    <div
+      class="hidden max-xl:block bottom-0 left-0 z-10 fixed bg-transparent w-full h-24"
+    >
       <div
         id="button-contact-data"
         class="hidden max-xl:block bg-sidebar mx-auto my-auto px-8 py-3 rounded-lg w-fit text-white text-lg translate-y-1/2"
