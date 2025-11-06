@@ -4,22 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstTwoDetails = Array.from(document.querySelectorAll(".comp")).filter(
     (_, index) => index < 2
   );
-  const firstTwoDetailsSm = Array.from(
-    document.querySelectorAll(".comp-sm")
-  ).filter((_, index) => index < 2);
-  const arrDetails = [...firstTwoDetails, ...firstTwoDetailsSm];
 
-  const allEdjucationDetails = Array.from(
-    document.querySelectorAll(".edjucation")
-  );
+  // const allEdjucationDetails = Array.from(
+  //   document.querySelectorAll(".edjucation")
+  // );
 
-  for (let detail of arrDetails) {
+  for (let detail of firstTwoDetails) {
     detail.setAttribute("open", "");
   }
 
-  for (let detail of allEdjucationDetails) {
-    detail.setAttribute("open", "");
-  }
+  // for (let detail of allEdjucationDetails) {
+  //   detail.setAttribute("open", "");
+  // }
 
   if (allArticles.length > 0) {
     allArticles.forEach((article) => {
