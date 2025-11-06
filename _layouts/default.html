@@ -24,7 +24,7 @@
     {%if page.has_header%} {%include header.html%} {%endif%}
     <div class="flex flex-row bg-white w-full h-full">
       <aside
-        class="max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mt-20 xl:mt-40"
+        class="z-20 max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mt-20 xl:mt-40"
       >
         {%include left_sidebar.html%}
       </aside>
@@ -35,7 +35,7 @@
         {{content}}
       </main>
       <aside
-        class="max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1"
+        class="z-20 max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1"
       >
         {%include left_sidebar.html%}
       </aside>
@@ -44,18 +44,18 @@
     <footer>{%include footer.html%}</footer>
     {%endif%}
     <div
-      class="hidden max-xl:block bottom-0 left-0 z-10 fixed bg-transparent w-full h-24"
+      class="hidden max-2xl:block bottom-0 left-0 z-10 fixed bg-transparent w-full h-24"
     >
       <div
         id="button-contact-data"
-        class="hidden max-xl:block bg-sidebar mx-auto my-auto px-8 py-3 rounded-lg w-fit text-white text-lg translate-y-1/2"
+        class="hidden max-2xl:block bg-sidebar mx-auto my-auto px-8 py-3 rounded-lg w-fit text-white text-lg translate-y-1/2 cursor-pointer"
       >
         {{page.contact_data}}
       </div>
     </div>
     <aside
       id="left-sidebar-small"
-      class="hidden max-xl:block top-1/2 left-0 fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 transition -translate-y-1/2 duration-700 pointer-events-none transform"
+      class="hidden top-1/2 left-0 z-20 fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 transform"
     >
       {%include left_sidebar.html%}
     </aside>

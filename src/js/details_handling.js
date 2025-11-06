@@ -5,17 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     (_, index) => index < 2
   );
 
-  // const allEdjucationDetails = Array.from(
-  //   document.querySelectorAll(".edjucation")
-  // );
-
   for (let detail of firstTwoDetails) {
     detail.setAttribute("open", "");
   }
-
-  // for (let detail of allEdjucationDetails) {
-  //   detail.setAttribute("open", "");
-  // }
 
   if (allArticles.length > 0) {
     allArticles.forEach((article) => {
@@ -26,6 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // const allEdjucationDetails = Array.from(
+  //   document.querySelectorAll(".edjucation")
+  // );
+
+  // for (let detail of allEdjucationDetails) {
+  //   detail.setAttribute("open", "");
+  // }
 });
 
 function closeDetail(detail) {

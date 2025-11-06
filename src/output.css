@@ -221,6 +221,9 @@
   .z-10 {
     z-index: 10;
   }
+  .z-20 {
+    z-index: 20;
+  }
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -369,6 +372,9 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
@@ -384,14 +390,8 @@
   .snap-always {
     scroll-snap-stop: always;
   }
-  .scroll-mt-12 {
-    scroll-margin-top: calc(var(--spacing) * 12);
-  }
   .scroll-mt-14 {
     scroll-margin-top: calc(var(--spacing) * 14);
-  }
-  .scroll-mt-16 {
-    scroll-margin-top: calc(var(--spacing) * 16);
   }
   .list-none {
     list-style-type: none;
@@ -520,6 +520,20 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .delay-200 {
+    transition-delay: 200ms;
+  }
+  .delay-300 {
+    transition-delay: 300ms;
+  }
+  .delay-700 {
+    transition-delay: 700ms;
+  }
   .duration-700 {
     --tw-duration: 700ms;
     transition-duration: 700ms;
@@ -527,6 +541,11 @@
   .select-none {
     -webkit-user-select: none;
     user-select: none;
+  }
+  .max-2xl\:block {
+    @media (width < 96rem) {
+      display: block;
+    }
   }
   .max-2xl\:hidden {
     @media (width < 96rem) {

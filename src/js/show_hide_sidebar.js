@@ -28,12 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showSidebarLeft() {
-    leftSidebarSmall.classList.remove("opacity-0");
     mainContainer.classList.add("blur-sm");
+    leftSidebarSmall.classList.add("max-2xl:block");
+    leftSidebarSmall.classList.remove("opacity-0");
   }
 
   function hideSidebarLeft() {
     leftSidebarSmall.classList.add("opacity-0");
+    leftSidebarSmall.classList.remove("max-2xl:block");
     mainContainer.classList.remove("blur-sm");
   }
 });
