@@ -9,7 +9,7 @@
     <script src="{{site.baseurl}}/src/js/show_hide_sidebar.js"></script>
     <script src="{{site.baseurl}}/src/js/details_handling.js"></script>
   </head>
-  <body class="relative w-full h-full">
+  <body class="relative w-full h-full select-none">
     {%if page.has_header%} {%include header.html%} {%endif%}
     <div class="flex flex-row bg-white w-full h-full">
       <aside
@@ -42,7 +42,7 @@
     </div>
     <aside
       id="left-sidebar-small"
-      class="hidden max-xl:block top-1/2 left-0 fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 -translate-y-1/2 pointer-events-none transform"
+      class="hidden max-xl:block top-1/2 left-0 fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 transition -translate-y-1/2 duration-700 pointer-events-none transform"
     >
       {%include left_sidebar.html%}
     </aside>

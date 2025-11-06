@@ -1,73 +1,81 @@
 @import "tailwindcss";
 
 body {
-    @apply font-['Spectral-ExtraLight'] text-neutral-700 text-sm xl:text-base;
+  @apply font-['Spectral-ExtraLight'] text-neutral-700 text-sm xl:text-base;
 }
 
 h1 {
-    @apply pb-4 xl:pb-8 font-['ZalandoSans'] text-cyan-700 text-xl xl:text-3xl;
+  @apply pb-4 xl:pb-8 font-['ZalandoSans'] text-cyan-700 text-xl xl:text-3xl;
 }
 
 h2 {
-    @apply font-['ZalandoSans'] xl:font-normal font-bold text-neutral-700 text-base xl:text-lg;
+  @apply font-['ZalandoSans'] xl:font-normal font-bold text-neutral-700 text-base xl:text-lg;
 }
 
 nav h2 {
-    @apply px-4 xl:px-8 font-['ZalandoSans'] xl:font-normal font-bold text-yellow-600 text-base xl:text-xl;
+  @apply px-4 xl:px-8 font-['ZalandoSans'] xl:font-normal font-bold text-amber-600 text-base xl:text-xl;
 }
 
 aside h2 {
-    @apply text-inherit;
+  @apply text-inherit;
 }
 
 nav h2.italic {
-    @apply font-['ZalandoSans-Italic'] xl:font-normal font-bold text-amber-500 text-base xl:text-xl;
+  @apply font-['ZalandoSans-Italic'] xl:font-normal font-bold text-amber-500 text-base xl:text-xl;
 }
 
 h3 {
-    @apply font-['Spectral-ExtraBold'];
+  @apply font-['Spectral-ExtraBold'];
 }
 
 div {
-    @apply font-['Spectral-Medium'];
+  @apply font-['Spectral-Medium'];
 }
 
 a {
-    @apply underline underline-offset-1 cursor-pointer;
+  @apply underline underline-offset-1 cursor-pointer;
 }
 
 details {
-    @apply pt-4 pb-2;
+  @apply pt-4 pb-2;
 }
 
-summary {
-    @apply caret-transparent cursor-pointer;
+details summary::marker {
+  @apply content-none;
 }
 
-article {
-    @apply bg-amber-50 mr-8 xl:mr-48 p-4 rounded-2xl text-inherit;
+details summary::-webkit-details-marker {
+  @apply hidden;
+}
+
+details summary {
+  @apply border-cyan-800/30 border-l-2 border-b-2 border-r-2 py-1 xl:py-2 px-2 xl:px-4 hover:border-cyan-800 rounded-b-2xl w-fit transition ease-in-out duration-700 cursor-pointer;
+}
+
+details article {
+  @apply mr-8 xl:mr-48 p-2 xl:p-4 text-inherit opacity-100 cursor-pointer border-b-2 border-l-2 hover:border-l-6 rounded-l-2xl border-cyan-800/30 hover:border-red-700 transition-all ease-in duration-500;
 }
 
 ul ul {
-    @apply list-decimal list-inside;
+  @apply list-decimal list-inside;
 }
 
 ul.company ul {
-    @apply list-disc list-inside;
+  @apply list-disc list-inside;
 }
 
 .date {
-    @apply font-['Spectral-ExtraLight'];
+  @apply font-['Spectral-ExtraLight'];
 }
 
 .col-gap {
-    @apply my-4 xl:my-8;
+  @apply my-4 xl:my-8;
 }
 
 .sticky-title {
-    @apply top-0 sticky flex justify-center items-center bg-amber-200 p-2 xl:p-4 w-full;
+  @apply top-0 sticky flex justify-center items-center bg-amber-200 p-2 xl:p-4 w-full;
 }
 
 .bg-sidebar {
-    @apply bg-cyan-800;
+  @apply bg-cyan-800;
 }

@@ -32,8 +32,8 @@ contact_data: Kontaktdaten
         {%if comp.info%}
         <details class="comp">
           <summary>{{page.summary_1}}</summary>
-          <article>
-            <ul class="hyphens-auto list-none company" lang="de">
+          <article class="pointer-events-auto">
+            <ul class="pointer-events-none list-none company">
               {%for item in comp.info%}
               <li>{{item | markdownify}}</li>
               {%endfor%}
@@ -45,10 +45,10 @@ contact_data: Kontaktdaten
     </div>
     <div class="hidden max-xl:block col-span-full -mt-3 hyphens-auto" lang="de">
       {%if comp.info%}
-      <details class="comp">
+      <details class="comp-sm">
         <summary>{{page.summary_1}}</summary>
-        <article>
-          <ul class="hyphens-auto list-none company" lang="de">
+        <article class="pointer-events-auto">
+          <ul class="pointer-events-none list-none company">
             {%for item in comp.info%}
             <li>{{item | markdownify}}</li>
             {%endfor%}
@@ -74,8 +74,8 @@ contact_data: Kontaktdaten
         {%if ed.info%}
         <details class="edjucation">
           <summary>{{page.summary_2}}</summary>
-          <article>
-            <ul class="list-none">
+          <article class="pointer-events-auto">
+            <ul class="pointer-events-none list-none">
               {%for item in ed.info%}
               <li>{{item | markdownify}}</li>
               {%endfor%}
@@ -89,8 +89,8 @@ contact_data: Kontaktdaten
       {%if ed.info%}
       <details class="edjucation">
         <summary>{{page.summary_2}}</summary>
-        <article>
-          <ul class="hyphens-auto list-none" lang="de">
+        <article class="pointer-events-auto">
+          <ul class="pointer-events-none list-none">
             {%for item in ed.info%}
             <li>{{item | markdownify}}</li>
             {%endfor%}

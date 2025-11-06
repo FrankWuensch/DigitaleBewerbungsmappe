@@ -30,12 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function showSidebarLeft() {
     leftSidebarSmall.classList.remove("opacity-0");
     mainContainer.classList.add("blur-sm");
-    leftSidebarSmall.style.display = "block";
   }
 
   function hideSidebarLeft() {
     leftSidebarSmall.classList.add("opacity-0");
     mainContainer.classList.remove("blur-sm");
-    leftSidebarSmall.style.display = "none";
   }
 });
