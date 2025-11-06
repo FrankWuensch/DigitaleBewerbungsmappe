@@ -30,7 +30,7 @@ contact_data: Kontaktdaten
       <div>{{comp.city}}</div>
       <div class="max-xl:hidden -mt-1">
         {%if comp.info%}
-        <details>
+        <details class="comp">
           <summary>{{page.summary_1}}</summary>
           <article>
             <ul class="hyphens-auto list-none company" lang="de">
@@ -45,7 +45,7 @@ contact_data: Kontaktdaten
     </div>
     <div class="hidden max-xl:block col-span-full -mt-3 hyphens-auto" lang="de">
       {%if comp.info%}
-      <details class="w-full">
+      <details class="comp">
         <summary>{{page.summary_1}}</summary>
         <article>
           <ul class="hyphens-auto list-none company" lang="de">
@@ -72,7 +72,7 @@ contact_data: Kontaktdaten
       <div>{{ed.city}}</div>
       <div class="max-xl:hidden -mt-1">
         {%if ed.info%}
-        <details>
+        <details class="edjucation">
           <summary>{{page.summary_2}}</summary>
           <article>
             <ul class="list-none">
@@ -87,7 +87,7 @@ contact_data: Kontaktdaten
     </div>
     <div class="hidden max-xl:block col-span-full -mt-3 hyphens-auto" lang="de">
       {%if ed.info%}
-      <details class="w-full">
+      <details class="edjucation">
         <summary>{{page.summary_2}}</summary>
         <article>
           <ul class="hyphens-auto list-none" lang="de">

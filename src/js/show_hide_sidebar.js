@@ -1,19 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const sidebar_left_small = document.querySelector("#left-sidebar-small");
-  const btn_contact_data = document.querySelector("#button-contact-data");
-  const main_container = document.querySelector("#content");
-  const blurred = document.querySelector("#blurred");
+  const leftSidebarSmall = document.querySelector("#left-sidebar-small");
+  const btnContactData = document.querySelector("#button-contact-data");
+  const mainContainer = document.querySelector("#content");
 
   if (
-    sidebar_left_small !== null &&
-    btn_contact_data !== null &&
-    main_container !== null
+    leftSidebarSmall !== null &&
+    btnContactData !== null &&
+    mainContainer !== null
   ) {
-    btn_contact_data.addEventListener("click", (evt) => {
-      console.log(evt.currentTarget);
-      if (evt.currentTarget === btn_contact_data) {
+    btnContactData.addEventListener("click", (evt) => {
+      if (evt.currentTarget === btnContactData) {
         let sidebar_is_visible =
-          !sidebar_left_small.classList.contains("opacity-0");
+          !leftSidebarSmall.classList.contains("opacity-0");
         if (sidebar_is_visible) {
           hideSidebarLeft();
         } else {
@@ -24,20 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    main_container.addEventListener("click", () => {
+    mainContainer.addEventListener("click", () => {
       hideSidebarLeft();
     });
   }
 
   function showSidebarLeft() {
-    sidebar_left_small.classList.remove("opacity-0");
-    main_container.classList.add("blur-sm");
-    sidebar_left_small.style.display = "block";
+    leftSidebarSmall.classList.remove("opacity-0");
+    mainContainer.classList.add("blur-sm");
+    leftSidebarSmall.style.display = "block";
   }
 
   function hideSidebarLeft() {
-    sidebar_left_small.classList.add("opacity-0");
-    main_container.classList.remove("blur-sm");
-    sidebar_left_small.style.display = "none";
+    leftSidebarSmall.classList.add("opacity-0");
+    mainContainer.classList.remove("blur-sm");
+    leftSidebarSmall.style.display = "none";
   }
 });

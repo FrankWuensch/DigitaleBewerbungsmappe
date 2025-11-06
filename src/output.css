@@ -615,6 +615,7 @@ details {
 }
 summary {
   cursor: pointer;
+  caret-color: transparent;
 }
 article {
   margin-right: calc(var(--spacing) * 8);

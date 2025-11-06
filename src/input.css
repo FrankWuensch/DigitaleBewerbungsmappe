@@ -41,7 +41,7 @@ details {
 }
 
 summary {
-    @apply cursor-pointer;
+    @apply caret-transparent cursor-pointer;
 }
 
 article {
