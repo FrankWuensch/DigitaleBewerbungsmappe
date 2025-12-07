@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const leftSidebarSmall = document.querySelector("#left-sidebar-small");
   const btnContactData = document.querySelector("#button-contact-data");
   const mainContainer = document.querySelector("#content");
+  const referenzProjekte = document.querySelector("#referenz-projekte");
+  const rightSidebar = document.querySelector("#right-sidebar");
 
   if (
     leftSidebarSmall !== null &&
@@ -13,29 +15,47 @@ document.addEventListener("DOMContentLoaded", () => {
         let sidebar_is_visible =
           !leftSidebarSmall.classList.contains("opacity-0");
         if (sidebar_is_visible) {
-          hideSidebarLeft();
+          hideSmallSidebar(leftSidebarSmall);
         } else {
-          showSidebarLeft();
+          showSmallSidebar(leftSidebarSmall);
         }
       } else {
-        hideSidebarLeft();
+        hideSmallSidebar(leftSidebarSmall);
       }
     });
 
     mainContainer.addEventListener("click", () => {
-      hideSidebarLeft();
+      hideSmallSidebar(leftSidebarSmall);
     });
   }
 
-  function showSidebarLeft() {
+  referenzProjekte.addEventListener("click", (evt) => {
+    let sidebar_is_visible =
+      !rightSidebar.classList.contains("opacity-0");
+    if (sidebar_is_visible) {
+      hideSidebar(rightSidebar);
+    } else {
+      showSidebar(rightSidebar);
+    }
+  });
+
+  function showSmallSidebar(sidebar) {
     mainContainer.classList.add("blur-sm");
-    leftSidebarSmall.classList.add("max-2xl:block");
-    leftSidebarSmall.classList.remove("opacity-0");
+    sidebar.classList.add("max-2xl:block");
+    sidebar.classList.remove("opacity-0");
   }
 
-  function hideSidebarLeft() {
-    leftSidebarSmall.classList.add("opacity-0");
-    leftSidebarSmall.classList.remove("max-2xl:block");
+  function hideSmallSidebar(sidebar) {
+    sidebar.classList.add("opacity-0");
+    sidebar.classList.remove("max-2xl:block");
     mainContainer.classList.remove("blur-sm");
+  }
+
+  function showSidebar(sidebar) {
+    sidebar.classList.remove("opacity-0");
+  }
+
+  function hideSidebar(sidebar) {
+    sidebar.classList.add("opacity-0");
   }
 });

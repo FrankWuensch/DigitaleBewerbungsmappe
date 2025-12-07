@@ -1,0 +1,46 @@
+public:
+  - label: KlangkunstManufaktur e.V.
+    link: "https://www.klangkunstmanufaktur.de"
+    stack: |
+      - Jekyll
+      - HTML
+      - TailwindCSS
+      - JavaScript
+      - Docker
+  - label: Bike Blog FW
+    link: "https://frankwuensch.github.io/bike-blog-fw/"
+    stack: |
+      - Jekyll
+      - HTML
+      - TailwindCSS
+      - JavaScript
+      - Docker
+private:
+  - label: App zur Bestimmung von Wildpilzen
+    stack: |
+      - Java
+      - XML
+      - HTML
+      - JavaScript
+      - TailwindCSS
+  - label: App zur Erstellung einer Einkaufsliste
+    stack: |
+      - Kotlin
+      - XML
+      - HTML
+      - JavaScript
+      - TailwindCSS
+      - SQLite
+  - label: Programm zum auffinden und entfernen von Dateiduplikaten
+    stack: |
+      - Python
+      - Qt Creator
+      - PySide6
+  - label: Webanwendung mit Datenbankanbindung
+    stack: |
+      - Django
+      - Python
+      - HTML
+      - TailwindCSS
+      - Docker
+      - DjangoTables 2

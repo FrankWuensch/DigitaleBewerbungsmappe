@@ -34,15 +34,16 @@
       >
         {{content}}
       </main>
-      <aside
-        class="z-20 max-2xl:hidden {%if page.has_sidebar_right%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1"
+      <aside id="right-sidebar"
+        class="z-20 max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mt-20 xl:mt-40"
       >
-        {%include left_sidebar.html%}
+        {%include right_sidebar.html%}
       </aside>
     </div>
     {%if page.has_footer%}
     <footer>{%include footer.html%}</footer>
     {%endif%}
+    <!-- smartphone -->
     <div
       class="hidden max-2xl:block bottom-0 left-0 z-10 fixed bg-transparent w-full h-24"
     >

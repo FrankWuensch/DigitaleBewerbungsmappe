@@ -1,1 +1,37 @@
-<div class="flex flex-col px-8 pt-20 min-w-min max-w-80 h-full text-white shrink"></div>
+<div id="aside-right"
+    class="flex flex-col xl:mx-auto py-12 xl:py-20 min-w-min max-w-80 h-full text-white overflow-y-auto">
+    <div class="px-8">
+        <h2 class="pb-4 xl:pb-10">{{page.heading_sidebar_right}}</h2>
+        <h3>Öffentlich</h3>
+        {% assign sorted_projects_public = site.data.reference_projects.public | sort: "label" %}
+        <ol>
+            {%for el in sorted_projects_public%}
+            <li class="pt-2">
+                <a href="{{el.link}}" target="_blank">
+                    {{el.label}}
+                </a>
+                {% assign sorted_stack = el.stack | split: '- ' | sort %}
+                {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
+                <ol class="text-sm">
+                    {% for stack_el in filtered_stack %}
+                    <li class="list-disc ml-5">{{ stack_el | strip | markdownify }}</li>
+                    {% endfor %}
+                </ol>
+            </li>
+            {%endfor%}
+        </ol>
+        <hr class="my-4">
+        <h3>Privat</h3>
+        {% assign sorted_projects_private = site.data.reference_projects.private | sort: "label" %}
+        {% for el in sorted_projects_private %}
+        <div class="pt-2">{{ el.label }}</div>
+        {% assign sorted_stack = el.stack | split: '- ' | sort %}
+        {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
+        <ol class="text-sm">
+            {% for stack_el in filtered_stack %}
+            <li class="list-disc ml-5">{{ stack_el | strip | markdownify }}</li>
+            {% endfor %}
+        </ol>
+        {% endfor %}
+    </div>
+</div>
