@@ -52,6 +52,21 @@ further_education:
       - Statistik und Wahrscheinlichkeitsrechnungen mit Python
       - Big Data und Data Science
       - Machine Learning und Künstliche Intelligenz
+  - name: "Data Analyst"
+    year: "11/2025 - 12/2025"
+    company: "Data Smart Point GmbH"
+    city: "10719 Berlin"
+    street: "Knesebeckstraße 62-63"
+    info: |
+      - Einführung in das Thema Datenanalyse
+      - Verwendung der Software KNIME zur Erstellung von ETL Workflows
+      - Verwendung der Software Microsoft PowerBI
+      - IHK Prüfung zum Data Analyst
+        - Dokumentation
+        - ETL Workflow mit KNIME
+        - Visualisierung der Ergebnisse mit PowerBI
+        - Präsentation
+        - Fachliche Fragen im Anschluss zur Präsentation
 companies:
   - name: "Industriemechaniker"
     year: "01/2015 - 01/2016"
