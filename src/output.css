@@ -567,6 +567,12 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .py-0 {
+    padding-block: calc(var(--spacing) * 0);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -814,6 +820,11 @@
   .xl\:px-0 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .xl\:py-2 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 2);
     }
   }
   .xl\:py-20 {
