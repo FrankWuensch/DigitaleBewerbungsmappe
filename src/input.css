@@ -24,6 +24,10 @@ nav h2.italic {
   @apply font-['ZalandoSans-Italic'] xl:font-normal font-bold text-amber-500 text-base xl:text-xl;
 }
 
+nav a {
+  @apply text-neutral-700!;
+}
+
 h3 {
   @apply font-['Spectral-ExtraBold'];
 }

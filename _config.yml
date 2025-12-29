@@ -26,6 +26,25 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/DigitaleBewerbungsmappe" # the subpath of your site, e.g. /blog
 url: "https://frankwuensch.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: FrankWuensch
+certificates:
+  - name: KUKA Programmieren 1
+    institute: KUKA College Augsburg [2019]
+    link: /src/certificates/KUKA_Programmieren_1.pdf
+  - name: SPS Fachkraft
+    institute: ILS Hamburg [2019-2020]
+    link: /src/certificates/SPS_Fachkraft_ILS.pdf
+  - name: Geprüfter C++ Programmierer
+    institute: ILS Hamburg [2021-2022]
+    link: /src/certificates/CPP_Programmierer_ILS.pdf
+  - name: Python Programmierung Data Science / Machine Learning
+    institute: ILS Hamburg [2023-2024]
+    link: /src/certificates/Python_Programmierung_ILS.pdf
+  - name: Hackathon Kirchheim
+    institute: bwcon GmbH [2023]
+    link: /src/certificates/Hackathon_Kirchheim.pdf
+  - name: IHK Data Analyst
+    institute: IHK Akademie Bayern [2025]
+    link: /src/certificates/IHK_Data_Analyst_DSP.pdf
 
 plugins:
   - jekyll-inline-svg

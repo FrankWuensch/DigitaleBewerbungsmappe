@@ -1,0 +1,30 @@
+---
+layout: default
+header_title_1: Frank Wünsch
+header_title_2: Digitale Bewerbungsmappe
+has_header: yes
+has_sidebar_left: yes
+has_sidebar_right: yes
+heading_sidebar_left: Persönliche Daten
+heading_sidebar_right: Referenzprojekte
+head_title: Zertifikate
+contact_data: Kontaktdaten
+---
+
+<div class="pb-8 xl:pb-16 w-full h-full overflow-y-auto">
+    <h1 class="h-12 xl:h-16">{{page.head_title}}</h1>
+    <div class="grid grid-cols-1 xl:grid-cols-4 gap-x-4 gap-y-12 xl:gap-y-6">
+        {% for cert in site.certificates %}
+        <div class="w-full h-auto aspect-[4/6.5]">
+            <iframe src="{{ site.baseurl }}{{ cert.link }}"
+                    class="w-full h-full pb-3"
+                    loading="lazy">
+            </iframe>
+            <p>
+                <div class="text-sm">{{ cert.name }}</div>
+                <div class="text-xs">{{ cert.institute }}</div>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
