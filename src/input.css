@@ -25,6 +25,10 @@ nav h2.italic {
 }
 
 nav a {
+  @apply text-neutral-400!;
+}
+
+nav a.active {
   @apply text-neutral-700!;
 }
 

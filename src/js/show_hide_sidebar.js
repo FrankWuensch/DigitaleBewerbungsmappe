@@ -34,12 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
       !rightSidebar.classList.contains("opacity-0");
     if (sidebar_is_visible) {
       hideSidebar(rightSidebar);
-      referenzProjekte.classList.remove("text-neutral-700!");
-      referenzProjekte.classList.add("text-neutral-400!");
+      referenzProjekte.classList.remove("active!");
     } else {
       showSidebar(rightSidebar);
-      referenzProjekte.classList.remove("text-neutral-400!");
-      referenzProjekte.classList.add("text-neutral-700!");
+      referenzProjekte.classList.add("active!");
     }
   });
 
