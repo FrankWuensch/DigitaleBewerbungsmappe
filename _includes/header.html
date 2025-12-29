@@ -1,13 +1,27 @@
-<header class="top-0 left-0 fixed w-full h-20 xl:h-40 z-10">
-    <nav class="flex mx-auto border-b-2 border-b-cyan-800 bg-yellow-100 w-full xl:max-w-6xl h-full shrink justify-between">
+<header class="top-0 left-0 z-10 fixed w-full h-20 xl:h-40">
+    <nav class="max-xl:relative flex justify-between bg-yellow-100 mx-auto border-b-2 border-b-cyan-800 w-full xl:max-w-6xl h-full shrink">
         <div class="flex flex-col justify-center px-4 xl:px-0 w-full">
             <h2>{{page.header_title_1}}</h2>
             <h2 class="italic">{{page.header_title_2}}</h2>
         </div>
-        <div class="flex items-end pb-7 xl:pb-12 h-full pr-8 bg-inherit max-xl:hidden gap-x-6">
-            <a href="{{site.baseurl}}/" id="index" class="pointer-events-auto cursor-pointer">Lebenslauf</a>
-            <a href="{{site.baseurl}}/zertifikate" id="zertifikate" class="pointer-events-auto cursor-pointer">Zertifikate</a>
-            <a href="#" id="referenz-projekte" class="pointer-events-auto cursor-pointer">Referenzprojekte</a>
+        <!-- small screens -->
+        <div class="xl:hidden top-0 right-0 fixed flex items-center bg-white/50 border-b-2 border-b-cyan-800 w-20 h-20">
+            <div id="menu-button" class="w-full">
+                {%svg {{site.menu_symbol}} class="mx-auto w-[70%] h-full text-neutral-700!"%}
+            </div>
+        </div>
+        <div id="menu-content" class="hidden xl:hidden top-20 right-0 z-30! fixed bg-neutral-200 rounded-bl-xl w-[65%]">
+            <div class="flex flex-col divide-y-1 divide-neutral-700 w-full h-full">
+                <a href="{{site.baseurl}}/" id="index" class="px-3 py-3 cursor-pointer pointer-events-auto">Lebenslauf</a>
+                <a href="{{site.baseurl}}/zertifikate" id="zertifikate" class="px-3 py-3 cursor-pointer pointer-events-auto">Zertifikate</a>
+                <a href="#" id="referenz-projekte-small" class="px-3 py-3 cursor-pointer pointer-events-auto">Referenzprojekte</a>
+            </div>
+        </div>
+        <!-- large screens -->
+        <div class="max-xl:hidden max-xl:hidden flex items-end gap-x-6 bg-inherit pr-8 pb-7 xl:pb-12 h-full">
+            <a href="{{site.baseurl}}/" id="index" class="cursor-pointer pointer-events-auto">Lebenslauf</a>
+            <a href="{{site.baseurl}}/zertifikate" id="zertifikate" class="cursor-pointer pointer-events-auto">Zertifikate</a>
+            <a href="#" id="referenz-projekte" class="cursor-pointer pointer-events-auto">Referenzprojekte</a>
         </div>
     </nav>
 </header>

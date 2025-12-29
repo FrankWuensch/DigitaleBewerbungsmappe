@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const leftSidebarSmall = document.querySelector("#left-sidebar-small");
+  const rightSidebarSmall = document.querySelector("#right-sidebar-small");
   const btnContactData = document.querySelector("#button-contact-data");
   const mainContainer = document.querySelector("#content");
   const referenzProjekte = document.querySelector("#referenz-projekte");
+  const referenzProjekteSmall = document.querySelector("#referenz-projekte-small");
   const rightSidebar = document.querySelector("#right-sidebar");
+  const btnMenu = document.querySelector("#menu-button");
+  const menuContent = document.querySelector("#menu-content");
+
+  if (btnMenu !== null && menuContent !== null) {
+    btnMenu.addEventListener("click", (evt) => {
+      menuContent.classList.toggle("hidden");
+    });
+  }
 
   if (
     leftSidebarSmall !== null &&
@@ -12,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ) {
     btnContactData.addEventListener("click", (evt) => {
       if (evt.currentTarget === btnContactData) {
-        let sidebar_is_visible =
+        let sidebar_left_is_visible =
           !leftSidebarSmall.classList.contains("opacity-0");
-        if (sidebar_is_visible) {
+        if (sidebar_left_is_visible) {
           hideSmallSidebar(leftSidebarSmall);
         } else {
           showSmallSidebar(leftSidebarSmall);
@@ -30,13 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   referenzProjekte.addEventListener("click", (evt) => {
-    let sidebar_is_visible =
+    let sidebar_right_is_visible =
       !rightSidebar.classList.contains("opacity-0");
-    if (sidebar_is_visible) {
+    if (sidebar_right_is_visible) {
       hideSidebar(rightSidebar);
       referenzProjekte.classList.remove("active!");
     } else {
       showSidebar(rightSidebar);
+      referenzProjekte.classList.add("active!");
+    }
+  });
+
+  referenzProjekteSmall.addEventListener("click", (evt) => {
+    let sidebar_right_is_visible =
+      !rightSidebarSmall.classList.contains("opacity-0");
+    if (sidebar_right_is_visible) {
+      hideSidebar(rightSidebarSmall);
+      referenzProjekte.classList.remove("active!");
+    } else {
+      showSidebar(rightSidebarSmall);
       referenzProjekte.classList.add("active!");
     }
   });

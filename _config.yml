@@ -26,6 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/DigitaleBewerbungsmappe" # the subpath of your site, e.g. /blog
 url: "https://frankwuensch.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: FrankWuensch
+menu_symbol: /src/symbols/menu.svg
 certificates:
   - name: KUKA Programmieren 1
     institute: KUKA College Augsburg [2019]
