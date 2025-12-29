@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.add("max-2xl:block");
     sidebar.classList.remove("opacity-0");
     if (!menuContent.classList.hidden) {
-      menuContent.classList.toggle("hidden");
+      menuContent.classList.add("hidden");
     }
   }
 

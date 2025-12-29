@@ -31,21 +31,27 @@ certificates:
   - name: KUKA Programmieren 1
     institute: KUKA College Augsburg [2019]
     link: /src/certificates/KUKA_Programmieren_1.pdf
+    img: /src/certificates/jpg/KUKA_Programmieren_1.jpg
   - name: SPS Fachkraft
     institute: ILS Hamburg [2019-2020]
     link: /src/certificates/SPS_Fachkraft_ILS.pdf
+    img: /src/certificates/jpg/SPS_Fachkraft_ILS.jpg
   - name: Geprüfter C++ Programmierer
     institute: ILS Hamburg [2021-2022]
     link: /src/certificates/CPP_Programmierer_ILS.pdf
+    img: /src/certificates/jpg/CPP_Programmierer_ILS.jpg
   - name: Python Programmierung Data Science / Machine Learning
     institute: ILS Hamburg [2023-2024]
     link: /src/certificates/Python_Programmierung_ILS.pdf
+    img: /src/certificates/jpg/Python_Programmierung_ILS.jpg
   - name: Hackathon Kirchheim
     institute: bwcon GmbH [2023]
     link: /src/certificates/Hackathon_Kirchheim.pdf
+    img: /src/certificates/jpg/Hackathon_Kirchheim.jpg
   - name: IHK Data Analyst
     institute: IHK Akademie Bayern [2025]
     link: /src/certificates/IHK_Data_Analyst_DSP.pdf
+    img: /src/certificates/jpg/IHK_Data_Analyst_DSP.jpg
 
 plugins:
   - jekyll-inline-svg
