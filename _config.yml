@@ -40,7 +40,7 @@ certificates:
     institute: ILS Hamburg [2021-2022]
     link: /src/certificates/CPP_Programmierer_ILS.pdf
     img: /src/certificates/jpg/CPP_Programmierer_ILS.jpg
-  - name: Python Programmierung Data Science / Machine Learning
+  - name: Python Programmierer
     institute: ILS Hamburg [2023-2024]
     link: /src/certificates/Python_Programmierung_ILS.pdf
     img: /src/certificates/jpg/Python_Programmierung_ILS.jpg
