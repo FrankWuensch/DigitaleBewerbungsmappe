@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mainContainer.addEventListener("click", () => {
       hideSmallSidebar(leftSidebarSmall);
+      hideSmallSidebar(rightSidebarSmall);
     });
   }
 
@@ -55,10 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let sidebar_right_is_visible =
       !rightSidebarSmall.classList.contains("opacity-0");
     if (sidebar_right_is_visible) {
-      hideSidebar(rightSidebarSmall);
+      hideSmallSidebar(rightSidebarSmall);
       referenzProjekte.classList.remove("active!");
     } else {
-      showSidebar(rightSidebarSmall);
+      showSmallSidebar(rightSidebarSmall);
       referenzProjekte.classList.add("active!");
     }
   });
@@ -67,6 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
     mainContainer.classList.add("blur-sm");
     sidebar.classList.add("max-2xl:block");
     sidebar.classList.remove("opacity-0");
+    if (!menuContent.classList.hidden) {
+      menuContent.classList.toggle("hidden");
+    }
   }
 
   function hideSmallSidebar(sidebar) {
