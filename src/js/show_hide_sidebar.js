@@ -46,10 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
       !rightSidebar.classList.contains("opacity-0");
     if (sidebar_right_is_visible) {
       hideSidebar(rightSidebar);
-      referenzProjekte.classList.remove("active!");
     } else {
       showSidebar(rightSidebar);
-      referenzProjekte.classList.add("active!");
     }
   });
 
