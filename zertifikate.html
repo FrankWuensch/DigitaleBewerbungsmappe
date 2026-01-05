@@ -15,11 +15,11 @@ contact_data: Kontaktdaten
     <h1 class="h-12 xl:h-16">{{page.head_title}}</h1>
     <div class="gap-x-4 gap-y-12 xl:gap-y-6 grid grid-cols-1 xl:grid-cols-4">
         {% for cert in site.certificates %}
-        <a href="{{ site.baseurl }}{{ cert.link }}">
-            <div class="w-full max-xl:w-auto h-auto max-xl:h-[90%] aspect-[2/3]">
+        <a href="{{ site.baseurl }}{{ cert.link }}" class="max-xl:w-auto h-auto max-xl:h-[80%] aspect-[2/3]">
+            <div>
                 <img src="{{ site.baseurl }}{{ cert.img }}"
                     alt="{{ cert.name }}"
-                    class="pb-3 border-2 border-cyan-800 w-full xl:h-full"
+                    class="xl:pb-3 border-2 border-cyan-800 w-full max-xl:w-auto h-full"
                     loading="lazy">
                 <p>
                     <div class="text-sm">{{ cert.name }}</div>
