@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnMenu !== null && menuContent !== null) {
     btnMenu.addEventListener("click", (evt) => {
       menuContent.classList.toggle("hidden");
+      mainContainer.classList.toggle("blur-sm");
     });
   }
 
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let sidebar_right_is_visible =
       !rightSidebar.classList.contains("opacity-0");
     if (sidebar_right_is_visible) {
-      hideSidebar(rightSidebar);      
+      hideSidebar(rightSidebar);
       referenzProjekte.classList.remove("active!");
     } else {
       showSidebar(rightSidebar);
@@ -58,11 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sidebar_right_is_visible) {
       hideSmallSidebar(rightSidebarSmall);
       mainContainer.classList.remove("blur-sm");
-      referenzProjekte.classList.remove("active!");
+      mainContainer.addEventListener("click", () => {
+        hideSmallSidebar(leftSidebarSmall);
+        hideSmallSidebar(rightSidebarSmall);
+      });
     } else {
       showSmallSidebar(rightSidebarSmall);
       mainContainer.classList.add("blur-sm");
-      referenzProjekte.classList.add("active!");
     }
   });
 
