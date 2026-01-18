@@ -88,6 +88,10 @@ ul.company ul {
   @apply bg-cyan-800;
 }
 
-#aside-right::-webkit-scrollbar, #aside-right::-webkit-scrollbar {
+#aside-right::-webkit-scrollbar {
+  @apply hidden content-none;
+}
+
+#pers-info::-webkit-scrollbar {
   @apply hidden content-none;
 }

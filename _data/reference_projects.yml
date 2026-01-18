@@ -44,3 +44,8 @@ private:
       - TailwindCSS
       - Docker
       - DjangoTables 2
+  - label: App zur Vogelzählung
+    stack: |
+      - Kotlin
+      - Jetpack Compose
+      - SQLite

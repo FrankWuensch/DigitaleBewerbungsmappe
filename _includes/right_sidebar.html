@@ -1,5 +1,5 @@
 <div id="aside-right"
-    class="flex flex-col xl:mx-auto py-12 xl:py-20 min-w-min max-w-80 h-full text-white overflow-y-auto">
+    class="flex flex-col xl:mx-auto py-12 xl:py-20 min-w-min max-w-80 h-full overflow-y-auto text-white">
     <div class="px-8">
         <h2 class="pb-4 xl:pb-10">{{page.heading_sidebar_right}}</h2>
         <h3>Öffentlich</h3>
@@ -14,7 +14,7 @@
                 {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
                 <ol class="text-sm">
                     {% for stack_el in filtered_stack %}
-                    <li class="list-disc ml-5">{{ stack_el | strip | markdownify }}</li>
+                    <li class="ml-5 list-disc">{{ stack_el | strip | markdownify }}</li>
                     {% endfor %}
                 </ol>
             </li>
@@ -29,7 +29,7 @@
         {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
         <ol class="text-sm">
             {% for stack_el in filtered_stack %}
-            <li class="list-disc ml-5">{{ stack_el | strip | markdownify }}</li>
+            <li class="ml-5 list-disc">{{ stack_el | strip | markdownify }}</li>
             {% endfor %}
         </ol>
         {% endfor %}

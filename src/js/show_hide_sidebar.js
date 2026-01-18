@@ -8,11 +8,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightSidebar = document.querySelector("#right-sidebar");
   const btnMenu = document.querySelector("#menu-button");
   const menuContent = document.querySelector("#menu-content");
+  const allLinks = document.querySelectorAll(".certificate");
 
   if (btnMenu !== null && menuContent !== null) {
     btnMenu.addEventListener("click", (evt) => {
-      menuContent.classList.toggle("hidden");
-      mainContainer.classList.toggle("blur-sm");
+      if (evt.currentTarget === btnMenu) {
+        let menuContentIsVisible = !menuContent.classList.contains("hidden");
+        if (menuContentIsVisible) {
+          menuContent.classList.add("hidden");
+          mainContainer.classList.remove("blur-sm");
+          enableLinks();
+        } else {
+          menuContent.classList.remove("hidden");
+          mainContainer.classList.add("blur-sm");
+          disableLinks();
+        }
+      } else {
+        menuContent.classList.add("hidden");
+        mainContainer.classList.remove("blur-sm");
+        enableLinks();
+      }
     });
   }
 
@@ -38,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mainContainer.addEventListener("click", () => {
       hideSmallSidebar(leftSidebarSmall);
       hideSmallSidebar(rightSidebarSmall);
+      menuContent.classList.add("hidden");
     });
   }
 
@@ -74,12 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!menuContent.classList.hidden) {
       menuContent.classList.add("hidden");
     }
+    disableLinks();
   }
 
   function hideSmallSidebar(sidebar) {
     sidebar.classList.add("opacity-0");
     sidebar.classList.remove("max-2xl:block");
     mainContainer.classList.remove("blur-sm");
+    enableLinks();
   }
 
   function showSidebar(sidebar) {
@@ -88,5 +106,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideSidebar(sidebar) {
     sidebar.classList.add("opacity-0");
+  }
+
+  function disableLinks() {
+    allLinks.forEach(link => {
+      link.classList.add("pointer-events-none");
+    });
+  }
+
+  function enableLinks() {
+    allLinks.forEach(link => {
+      link.classList.remove("pointer-events-none");
+    });
   }
 });
