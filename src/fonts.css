@@ -7,6 +7,10 @@
     src: url('../src/fonts/RobotoMono-VariableFont_wght.ttf');
 }
 @font-face {
+    font-family: fac;
+    src: url('../src/fonts/Roboto.ttf');
+}
+@font-face {
     font-family: 'Spectral-ExtraBold';
     src: url('../src/fonts/Spectral-ExtraBold.ttf');
 }

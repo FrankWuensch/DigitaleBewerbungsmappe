@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  @apply font-['Spectral-ExtraLight'] text-neutral-700 text-sm xl:text-base;
+  @apply font-['Roboto'] text-neutral-700 text-sm xl:text-base;
 }
 
 h1 {
@@ -33,11 +33,11 @@ nav a.active {
 }
 
 h3 {
-  @apply font-['Spectral-ExtraBold'];
+  @apply font-['Roboto'] font-bold;
 }
 
 div {
-  @apply font-['Spectral-Medium'];
+  @apply font-['Roboto'] font-normal;
 }
 
 a {

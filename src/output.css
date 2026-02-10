@@ -729,11 +729,6 @@
       padding-left: calc(var(--spacing) * 8);
     }
   }
-  .max-lg\:block {
-    @media (width < 64rem) {
-      display: block;
-    }
-  }
   .xl\:col-span-1 {
     @media (width >= 80rem) {
       grid-column: span 1 / span 1;
@@ -856,7 +851,7 @@
   }
 }
 body {
-  font-family: 'Spectral-ExtraLight';
+  font-family: 'Roboto';
   font-size: var(--text-sm);
   line-height: var(--tw-leading, var(--text-sm--line-height));
   color: var(--color-neutral-700);
@@ -935,10 +930,14 @@ nav a.active {
   color: var(--color-neutral-700) !important;
 }
 h3 {
-  font-family: 'Spectral-ExtraBold';
+  font-family: 'Roboto';
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
 }
 div {
-  font-family: 'Spectral-Medium';
+  font-family: 'Roboto';
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
 }
 a {
   cursor: pointer;
