@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     references.forEach(element => {
         // console.log(window.location.href, element.href);
         element.classList.remove("active");
-        if (window.location.href === element.href) {
+        if (window.location.href === element.href && window.location.href !== "#") {
             element.classList.remove("text-neutral-400!");
             element.classList.add("active");
         } else {

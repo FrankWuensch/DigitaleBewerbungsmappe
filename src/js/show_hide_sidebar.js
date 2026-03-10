@@ -102,10 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
     menuContent.classList.remove("hidden");
     mainContainer.classList.add("blur-sm");
     if (!leftSidebar.classList.contains("opacity-0")) {
-      leftSidebar.classList.add("opacity-0");
+      hideSidebar(leftSidebar);
     }
     if (!rightSidebar.classList.contains("opacity-0")) {
-      rightSidebar.classList.add("opacity-0");
+      hideSidebar(rightSidebar);
     }
     disableLinks();
   }
