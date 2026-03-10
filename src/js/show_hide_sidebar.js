@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showMenuContent() {
     menuContent.classList.remove("opacity-0");
     menuContent.classList.remove("pointer-events-none");
+    menuContent.classList.remove("hidden");
     mainContainer.classList.add("blur-sm");
     if (!leftSidebar.classList.contains("opacity-0")) {
       leftSidebar.classList.add("opacity-0");
@@ -112,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function hideMenuContent() {
     menuContent.classList.add("opacity-0");
     menuContent.classList.add("pointer-events-none");
+    menuContent.classList.add("hidden");
     mainContainer.classList.remove("blur-sm");
     enableLinks();
   }
