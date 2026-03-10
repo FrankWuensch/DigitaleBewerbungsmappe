@@ -32,7 +32,7 @@
       </aside>
       <main
         id="content"
-        class="relative xl:mx-auto px-8 max-xl:pb-24 max-xl:pl-8 w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
+        class="relative 2xl:mx-auto px-8 max-xl:pb-24 max-xl:pl-8 w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
       >
         {{content}}
       </main>
@@ -58,13 +58,13 @@
     </div>
     <aside
       id="left-sidebar-small"
-      class="hidden top-1/2 left-0 z-20 isolate fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 transform"
+      class="top-1/2 left-0 z-20 isolate fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 pointer-events-none transform"
     >
       {%include left_sidebar.html%}
     </aside>
     <aside
       id="right-sidebar-small"
-      class="hidden top-1/2 right-0 z-20 isolate fixed bg-sidebar opacity-0 rounded-l-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 transform"
+      class="top-1/2 right-0 z-20 isolate fixed bg-sidebar opacity-0 rounded-l-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 pointer-events-none transform"
     >
       {%include right_sidebar.html%}
     </aside>

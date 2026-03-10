@@ -18,14 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  // const allEdjucationDetails = Array.from(
-  //   document.querySelectorAll(".edjucation")
-  // );
-
-  // for (let detail of allEdjucationDetails) {
-  //   detail.setAttribute("open", "");
-  // }
 });
 
 function closeDetail(detail) {

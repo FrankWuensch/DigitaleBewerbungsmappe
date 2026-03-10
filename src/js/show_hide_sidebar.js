@@ -1,111 +1,87 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const leftSidebarSmall = document.querySelector("#left-sidebar-small");
-  const rightSidebarSmall = document.querySelector("#right-sidebar-small");
+  const leftSidebar = document.querySelector("#left-sidebar-small");
+  const rightSidebar = document.querySelector("#right-sidebar-small");
   const btnContactData = document.querySelector("#button-contact-data");
   const mainContainer = document.querySelector("#content");
-  const referenzProjekte = document.querySelector("#referenz-projekte");
-  const referenzProjekteSmall = document.querySelector("#referenz-projekte-small");
-  const rightSidebar = document.querySelector("#right-sidebar");
+  const referenzProjekte = document.querySelector("#referenz-projekte-small");
   const btnMenu = document.querySelector("#menu-button");
   const menuContent = document.querySelector("#menu-content");
   const allLinks = document.querySelectorAll(".certificate");
 
-  if (btnMenu !== null && menuContent !== null) {
+  if (btnMenu !== null &&
+    menuContent !== null) {
     btnMenu.addEventListener("click", (evt) => {
       if (evt.currentTarget === btnMenu) {
-        let menuContentIsVisible = !menuContent.classList.contains("hidden");
+        let menuContentIsVisible = !menuContent.classList.contains("opacity-0");
         if (menuContentIsVisible) {
-          menuContent.classList.add("hidden");
-          mainContainer.classList.remove("blur-sm");
-          enableLinks();
+          hideMenuContent();
         } else {
-          menuContent.classList.remove("hidden");
-          mainContainer.classList.add("blur-sm");
-          disableLinks();
+          showMenuContent();
         }
-      } else {
-        menuContent.classList.add("hidden");
-        mainContainer.classList.remove("blur-sm");
-        enableLinks();
       }
     });
   }
 
   if (
-    leftSidebarSmall !== null &&
+    leftSidebar !== null &&
     btnContactData !== null &&
     mainContainer !== null
   ) {
     btnContactData.addEventListener("click", (evt) => {
-      if (evt.currentTarget === btnContactData) {
-        let sidebar_left_is_visible =
-          !leftSidebarSmall.classList.contains("opacity-0");
-        if (sidebar_left_is_visible) {
-          hideSmallSidebar(leftSidebarSmall);
-        } else {
-          showSmallSidebar(leftSidebarSmall);
-        }
+      let sidebarLeftVisible = !leftSidebar.classList.contains("opacity-0");
+      if (sidebarLeftVisible) {
+        hideSidebar(leftSidebar);
       } else {
-        hideSmallSidebar(leftSidebarSmall);
+        showSidebar(leftSidebar);
       }
-    });
-
-    mainContainer.addEventListener("click", () => {
-      hideSmallSidebar(leftSidebarSmall);
-      hideSmallSidebar(rightSidebarSmall);
-      menuContent.classList.add("hidden");
     });
   }
 
-  referenzProjekte.addEventListener("click", (evt) => {
-    let sidebar_right_is_visible =
-      !rightSidebar.classList.contains("opacity-0");
-    if (sidebar_right_is_visible) {
-      hideSidebar(rightSidebar);
-    } else {
-      showSidebar(rightSidebar);
-    }
-  });
+  if (referenzProjekte !== null) {
+    referenzProjekte.addEventListener("click", (evt) => {
+      let sidebarRightVisible = !rightSidebar.classList.contains("opacity-0");
+      if (sidebarRightVisible) {
+        hideSidebar(rightSidebar);
+      } else {
+        showSidebar(rightSidebar);
+      }
+    });
+  }
 
-  referenzProjekteSmall.addEventListener("click", (evt) => {
-    let sidebar_right_is_visible =
-      !rightSidebarSmall.classList.contains("opacity-0");
-    if (sidebar_right_is_visible) {
-      hideSmallSidebar(rightSidebarSmall);
-      mainContainer.classList.remove("blur-sm");
-      mainContainer.addEventListener("click", () => {
-        hideSmallSidebar(leftSidebarSmall);
-        hideSmallSidebar(rightSidebarSmall);
-      });
-    } else {
-      showSmallSidebar(rightSidebarSmall);
-      mainContainer.classList.add("blur-sm");
-    }
-  });
+  if (mainContainer !== null) {
+    mainContainer.addEventListener("click", (evt) => {
+      let sidebarLeftVisible = !leftSidebar.classList.contains("opacity-0");
+      let sidebarRightVisible = !rightSidebar.classList.contains("opacity-0");
+      let menuContentVisible = !menuContent.classList.contains("opacity-0");
+      if (sidebarLeftVisible) {
+        hideSidebar(leftSidebar);
+      }
+      if (sidebarRightVisible) {
+        hideSidebar(rightSidebar);
+      }
+      if (menuContentVisible) {
+        hideMenuContent();
+      }
+    })
+  }
 
-  function showSmallSidebar(sidebar) {
+  function showSidebar(sidebar) {
     mainContainer.classList.add("blur-sm");
     sidebar.classList.add("max-2xl:block");
     sidebar.classList.remove("opacity-0");
-    if (!menuContent.classList.hidden) {
-      menuContent.classList.add("hidden");
+    sidebar.classList.remove("pointer-events-none");
+    if (!menuContent.classList.contains("opacity-0")) {
+      menuContent.classList.add("opacity-0");
     }
     disableLinks();
   }
 
-  function hideSmallSidebar(sidebar) {
+  function hideSidebar(sidebar) {
     sidebar.classList.add("opacity-0");
+    sidebar.classList.add("pointer-events-none");
     sidebar.classList.remove("max-2xl:block");
     mainContainer.classList.remove("blur-sm");
     enableLinks();
-  }
-
-  function showSidebar(sidebar) {
-    sidebar.classList.remove("opacity-0");
-  }
-
-  function hideSidebar(sidebar) {
-    sidebar.classList.add("opacity-0");
   }
 
   function disableLinks() {
@@ -118,5 +94,25 @@ document.addEventListener("DOMContentLoaded", () => {
     allLinks.forEach(link => {
       link.classList.remove("pointer-events-none");
     });
+  }
+
+  function showMenuContent() {
+    menuContent.classList.remove("opacity-0");
+    menuContent.classList.remove("pointer-events-none");
+    mainContainer.classList.add("blur-sm");
+    if (!leftSidebar.classList.contains("opacity-0")) {
+      leftSidebar.classList.add("opacity-0");
+    }
+    if (!rightSidebar.classList.contains("opacity-0")) {
+      rightSidebar.classList.add("opacity-0");
+    }
+    disableLinks();
+  }
+
+  function hideMenuContent() {
+    menuContent.classList.add("opacity-0");
+    menuContent.classList.add("pointer-events-none");
+    mainContainer.classList.remove("blur-sm");
+    enableLinks();
   }
 });

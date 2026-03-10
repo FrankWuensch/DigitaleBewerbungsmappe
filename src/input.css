@@ -25,6 +25,10 @@ nav h2.italic {
 }
 
 nav a {
+  @apply text-neutral-400! hover:text-neutral-700!;
+}
+
+nav a:last-of-type {
   @apply text-neutral-400!;
 }
 
