@@ -31,7 +31,7 @@ private:
       - JavaScript
       - TailwindCSS
       - SQLite
-  - label: Programm zum auffinden und entfernen von Dateiduplikaten
+  - label: Programm zum Auffinden und Entfernen von Dateiduplikaten
     stack: |
       - Python
       - Qt Creator

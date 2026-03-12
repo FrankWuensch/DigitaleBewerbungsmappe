@@ -53,6 +53,10 @@ certificates:
     institute: IHK Akademie Bayern [2025]
     link: /src/certificates/IHK_Data_Analyst_DSP.pdf
     img: /src/certificates/jpg/IHK_Data_Analyst_DSP.jpg
+  - name: DSP MySQL Zertifikat [2026]
+    institute: Data Smart Point Academy GmbH Berlin
+    link: "/src/certificates/MySQL Zertifikat.pdf"
+    img: "/src/certificates/jpg/MySQL Zertifikat.jpg"
 
 plugins:
   - jekyll-inline-svg
