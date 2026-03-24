@@ -1,6 +1,10 @@
 public:
   - label: KlangkunstManufaktur e.V.
     link: "https://www.klangkunstmanufaktur.de"
+    description: >
+      Ziel des Projekts ist die Erstellung einer aussagekräftigen, leicht wartbaren 
+      Webseite für meinen Verein. Dabei soll der Fokus auf der Konzertwerbung liegen, 
+      aber gleichzeitig für neue Mitglieder geworben werden.
     stack: |
       - Jekyll
       - HTML
@@ -9,6 +13,11 @@ public:
       - Docker
   - label: Bike Blog FW
     link: "https://frankwuensch.github.io/bike-blog-fw/"
+    description: >
+      Mit der Umsetzung dieses Projekts möchte ich es Besuchern dieser Webseite ermöglichen,
+      von mir geplante Fahrradtouren schnell und kostenlos herunterladen zu können. Das soll die 
+      Besucher dazu motivieren, diese Touren selbst zu fahren und mittels Bildern zeigen, 
+      welche schönen Momente sich bei solchen Touren ergeben können.
     stack: |
       - Jekyll
       - HTML
@@ -17,6 +26,12 @@ public:
       - Docker
 private:
   - label: App zur Bestimmung von Wildpilzen
+    description: >
+      Viele Pilzsammler kennen das: Man läuft durch den Wald und sieht einen Pilz, den man nicht kennt 
+      oder bei dem man sich nicht sicher ist. Genau diese Momente möchte ich mit meiner App reduzieren, 
+      indem ich strukturiert und mit Bildern alle relevanten Erkennungsmerkmale eines Pilzes zur Verfügung 
+      stelle. Ergänzt werden diese Informationen durch die Angabe, ob der Pilz essbar, bedingt essbar, 
+      ungenießbar oder sogar giftig ist. Eine automatische Erkennung mittels Bildanalyse ist geplant.
     stack: |
       - Java
       - XML
@@ -24,6 +39,12 @@ private:
       - JavaScript
       - TailwindCSS
   - label: App zur Erstellung einer Einkaufsliste
+    description: >
+      Dieses Projekt erstelle ich rein zu Übungszwecken, um das Zusammenspiel zwischen Kotlin und SQLite 
+      zu vertiefen. Dennoch nutze ich die App regelmäßig beim Einkaufen selbst, um mich beim Einkauf 
+      auf die wichtigen Produkte zu beschränken. Für die Zukunft ist geplant, dass ich in regelmäßigen 
+      Abständen automatisch die aktuellen Angebote verschiedener Discounter scrape. Auf Basis der so erhaltenen 
+      Daten werde ich dann u.a. Marktanalysen mit Blick auf den Preisverlauf verschiedener Produkte vornehmen.
     stack: |
       - Kotlin
       - XML
@@ -32,20 +53,14 @@ private:
       - TailwindCSS
       - SQLite
   - label: Programm zum Auffinden und Entfernen von Dateiduplikaten
+    description: >
+      Mit diesem Projekt möchte ich dazu beitragen, dass der Speicherplatz auf der Festplatte sinnvoll 
+      genutzt wird. Selbst bei einer guten Ordnerstruktur passiert es schnell, dass sich Duplikate von 
+      Dateien ansammeln und dadurch unnötig Speicherplatz belegt wird. Um zu verhindern, dass gewünschte 
+      Sicherungsdateien verloren gehen, hat der Benutzer die Möglichkeit, die automatisiert ausgewählten 
+      Duplikate vor dem Löschen abzuwählen.
     stack: |
       - Python
       - Qt Creator
       - PySide6
-  - label: Webanwendung mit Datenbankanbindung
-    stack: |
-      - Django
-      - Python
-      - HTML
-      - TailwindCSS
-      - Docker
-      - DjangoTables 2
-  - label: App zur Vogelzählung
-    stack: |
-      - Kotlin
-      - Jetpack Compose
-      - SQLite
+      

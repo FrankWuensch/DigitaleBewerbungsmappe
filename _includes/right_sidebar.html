@@ -10,6 +10,7 @@
                 <a href="{{el.link}}" target="_blank">
                     {{el.label}}
                 </a>
+                <div class="pb-2 text-sm text-justify hyphens-auto">{{el.description}}</div>
                 {% assign sorted_stack = el.stack | split: '- ' | sort %}
                 {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
                 <ol class="text-sm">
@@ -25,6 +26,7 @@
         {% assign sorted_projects_private = site.data.reference_projects.private | sort: "label" %}
         {% for el in sorted_projects_private %}
         <div class="pt-2">{{ el.label }}</div>
+        <div class="pb-2 text-sm text-justify hyphens-auto">{{el.description}}</div>
         {% assign sorted_stack = el.stack | split: '- ' | sort %}
         {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
         <ol class="text-sm">
