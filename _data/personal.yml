@@ -8,7 +8,7 @@
   value: "[Github Account](https://github.com/FrankWuensch)"
   icon: "/src/symbols/github.svg"
 - label: linkedin
-  value: "[LinkedIn Profil](https://www.linkedin.com/in/frank-w%C3%BCnsch-5b494b160/)"
+  value: "[LinkedIn Profil](https://www.linkedin.com/in/frank-w%C3%BCnsch/)"
   icon: "/src/symbols/linkedin.svg"
 - label: address
   value: "Zementstr. 1/1, 73230 Kirchheim/Teck"

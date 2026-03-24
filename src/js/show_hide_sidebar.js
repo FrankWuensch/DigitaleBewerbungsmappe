@@ -8,113 +8,99 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuContent = document.querySelector("#menu-content");
   const allLinks = document.querySelectorAll(".certificate");
 
-  if (btnMenu !== null &&
-    menuContent !== null) {
-    btnMenu.addEventListener("click", (evt) => {
-      if (evt.currentTarget === btnMenu) {
-        let menuContentIsVisible = !menuContent.classList.contains("opacity-0");
-        if (menuContentIsVisible) {
-          hideMenuContent();
-        } else {
-          showMenuContent();
-        }
-      }
-    });
-  }
-
-  if (
-    leftSidebar !== null &&
-    btnContactData !== null &&
-    mainContainer !== null
-  ) {
-    btnContactData.addEventListener("click", (evt) => {
-      let sidebarLeftVisible = !leftSidebar.classList.contains("opacity-0");
-      if (sidebarLeftVisible) {
-        hideSidebar(leftSidebar);
-      } else {
-        showSidebar(leftSidebar);
-      }
-    });
-  }
-
-  if (referenzProjekte !== null) {
-    referenzProjekte.addEventListener("click", (evt) => {
-      let sidebarRightVisible = !rightSidebar.classList.contains("opacity-0");
-      if (sidebarRightVisible) {
-        hideSidebar(rightSidebar);
-      } else {
-        showSidebar(rightSidebar);
-      }
-    });
-  }
-
-  if (mainContainer !== null) {
-    mainContainer.addEventListener("click", (evt) => {
-      let sidebarLeftVisible = !leftSidebar.classList.contains("opacity-0");
-      let sidebarRightVisible = !rightSidebar.classList.contains("opacity-0");
-      let menuContentVisible = !menuContent.classList.contains("opacity-0");
-      if (sidebarLeftVisible) {
-        hideSidebar(leftSidebar);
-      }
-      if (sidebarRightVisible) {
-        hideSidebar(rightSidebar);
-      }
-      if (menuContentVisible) {
-        hideMenuContent();
-      }
-    })
-  }
-
-  function showSidebar(sidebar) {
-    mainContainer.classList.add("blur-sm");
-    sidebar.classList.add("max-2xl:block");
-    sidebar.classList.remove("opacity-0");
-    sidebar.classList.remove("pointer-events-none");
-    if (!menuContent.classList.contains("opacity-0")) {
-      menuContent.classList.add("opacity-0");
-    }
-    disableLinks();
-  }
-
-  function hideSidebar(sidebar) {
-    sidebar.classList.add("opacity-0");
-    sidebar.classList.add("pointer-events-none");
-    sidebar.classList.remove("max-2xl:block");
-    mainContainer.classList.remove("blur-sm");
-    enableLinks();
-  }
-
+  // helper functions
   function disableLinks() {
-    allLinks.forEach(link => {
-      link.classList.add("pointer-events-none");
-    });
+    allLinks.forEach(link => link.classList.add("pointer-events-none"));
   }
 
   function enableLinks() {
-    allLinks.forEach(link => {
-      link.classList.remove("pointer-events-none");
-    });
+    allLinks.forEach(link => link.classList.remove("pointer-events-none"));
+  }
+
+  function hideSidebar(sidebar) {
+    if (!sidebar) return;
+    sidebar.classList.add("opacity-0", "pointer-events-none");
+    setTimeout(() => {
+      sidebar.classList.add("hidden");
+    }, 700);
+    sidebar.classList.remove("max-2xl:block");
+
+    const anyOverlayVisible =
+      (leftSidebar && !leftSidebar.classList.contains("opacity-0")) ||
+      (rightSidebar && !rightSidebar.classList.contains("opacity-0")) ||
+      (menuContent && !menuContent.classList.contains("opacity-0"));
+
+    if (!anyOverlayVisible) {
+      mainContainer?.classList.remove("blur-sm");
+    }
+
+    enableLinks();
+  }
+
+  function showSidebar(sidebar) {
+    if (!sidebar) return;
+    mainContainer?.classList.add("blur-sm");
+    sidebar.classList.add("max-2xl:block");
+    sidebar.classList.remove("hidden");
+    sidebar.classList.remove("opacity-0", "pointer-events-none");
+
+    // close menu
+    if (menuContent && !menuContent.classList.contains("opacity-0")) {
+      hideMenuContent();
+    }
+
+    disableLinks();
   }
 
   function showMenuContent() {
-    menuContent.classList.remove("opacity-0");
-    menuContent.classList.remove("pointer-events-none");
-    menuContent.classList.remove("hidden");
-    mainContainer.classList.add("blur-sm");
-    if (!leftSidebar.classList.contains("opacity-0")) {
-      hideSidebar(leftSidebar);
-    }
-    if (!rightSidebar.classList.contains("opacity-0")) {
-      hideSidebar(rightSidebar);
-    }
+    if (!menuContent) return;
+    menuContent.classList.remove("opacity-0", "pointer-events-none", "hidden");
+    mainContainer?.classList.add("blur-sm");
+
+    // close sidebars
+    hideSidebar(leftSidebar);
+    hideSidebar(rightSidebar);
+
     disableLinks();
   }
 
   function hideMenuContent() {
-    menuContent.classList.add("opacity-0");
-    menuContent.classList.add("pointer-events-none");
-    menuContent.classList.add("hidden");
-    mainContainer.classList.remove("blur-sm");
+    if (!menuContent) return;
+    menuContent.classList.add("opacity-0", "pointer-events-none", "hidden");
+
+    const anyOverlayVisible =
+      (leftSidebar && !leftSidebar.classList.contains("opacity-0")) ||
+      (rightSidebar && !rightSidebar.classList.contains("opacity-0"));
+
+    if (!anyOverlayVisible) {
+      mainContainer?.classList.remove("blur-sm");
+    }
+
     enableLinks();
   }
+
+  // event listener
+  btnMenu?.addEventListener("click", evt => {
+    evt.stopPropagation();
+    const isVisible = !menuContent.classList.contains("opacity-0");
+    isVisible ? hideMenuContent() : showMenuContent();
+  });
+
+  btnContactData?.addEventListener("click", evt => {
+    evt.stopPropagation();
+    const isVisible = !leftSidebar.classList.contains("opacity-0");
+    isVisible ? hideSidebar(leftSidebar) : showSidebar(leftSidebar);
+  });
+
+  referenzProjekte?.addEventListener("click", evt => {
+    evt.stopPropagation();
+    const isVisible = !rightSidebar.classList.contains("opacity-0");
+    isVisible ? hideSidebar(rightSidebar) : showSidebar(rightSidebar);
+  });
+
+  mainContainer?.addEventListener("click", () => {
+    hideSidebar(leftSidebar);
+    hideSidebar(rightSidebar);
+    hideMenuContent();
+  });
 });
