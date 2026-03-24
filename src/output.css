@@ -295,6 +295,9 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
@@ -570,6 +573,12 @@
   .py-0\.5 {
     padding-block: calc(var(--spacing) * 0.5);
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
@@ -683,6 +692,11 @@
     -webkit-user-select: none;
     user-select: none;
   }
+  .last\:pb-2 {
+    &:last-child {
+      padding-bottom: calc(var(--spacing) * 2);
+    }
+  }
   .max-2xl\:relative {
     @media (width < 96rem) {
       position: relative;
@@ -741,6 +755,12 @@
   .max-xl\:pl-8 {
     @media (width < 80rem) {
       padding-left: calc(var(--spacing) * 8);
+    }
+  }
+  .max-xl\:text-xs {
+    @media (width < 80rem) {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
     }
   }
   .xl\:col-span-1 {
@@ -851,6 +871,17 @@
   .xl\:pb-16 {
     @media (width >= 80rem) {
       padding-bottom: calc(var(--spacing) * 16);
+    }
+  }
+  .xl\:text-justify {
+    @media (width >= 80rem) {
+      text-align: justify;
+    }
+  }
+  .xl\:hyphens-auto {
+    @media (width >= 80rem) {
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
   }
   .\32 xl\:mx-auto {

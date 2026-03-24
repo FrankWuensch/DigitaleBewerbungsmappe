@@ -1,6 +1,6 @@
 <div id="aside-right"
     class="flex flex-col xl:mx-auto py-12 xl:py-20 min-w-min max-w-80 h-full overflow-y-auto text-white">
-    <div class="px-8">
+    <div class="px-4">
         <h2 class="pb-4 xl:pb-10">{{page.heading_sidebar_right}}</h2>
         <h3>Öffentlich</h3>
         {% assign sorted_projects_public = site.data.reference_projects.public | sort: "label" %}
@@ -10,12 +10,13 @@
                 <a href="{{el.link}}" target="_blank">
                     {{el.label}}
                 </a>
-                <div class="pb-2 text-sm text-justify hyphens-auto">{{el.description}}</div>
+                <br>
+                <i class="py-2 max-xl:text-xs xl:text-justify xl:hyphens-auto">{{el.description}}</i>
                 {% assign sorted_stack = el.stack | split: '- ' | sort %}
                 {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
-                <ol class="text-sm">
+                <ol class="max-xl:text-xs">
                     {% for stack_el in filtered_stack %}
-                    <li class="ml-5 list-disc">{{ stack_el | strip | markdownify }}</li>
+                    <li class="ml-5 last:pb-2 list-disc">{{ stack_el | strip | markdownify }}</li>
                     {% endfor %}
                 </ol>
             </li>
@@ -26,12 +27,12 @@
         {% assign sorted_projects_private = site.data.reference_projects.private | sort: "label" %}
         {% for el in sorted_projects_private %}
         <div class="pt-2">{{ el.label }}</div>
-        <div class="pb-2 text-sm text-justify hyphens-auto">{{el.description}}</div>
+        <i class="py-1 max-xl:text-xs xl:text-justify xl:hyphens-auto pz">{{el.description}}</i>
         {% assign sorted_stack = el.stack | split: '- ' | sort %}
         {% assign filtered_stack = sorted_stack | where_exp: "item", "item != ''" %}
-        <ol class="text-sm">
+        <ol class="max-xl:text-xs">
             {% for stack_el in filtered_stack %}
-            <li class="ml-5 list-disc">{{ stack_el | strip | markdownify }}</li>
+            <li class="ml-5 last:pb-2 list-disc">{{ stack_el | strip | markdownify }}</li>
             {% endfor %}
         </ol>
         {% endfor %}
