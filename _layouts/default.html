@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="w-full h-screen max-h-full">
+<html lang="de" class="w-full h-screen max-h-full overflow-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +32,7 @@
       </aside>
       <main
         id="content"
-        class="relative 2xl:mx-auto px-8 max-xl:pb-24 max-xl:pl-8 w-full max-w-6xl h-full overflow-hidden {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
+        class="relative 2xl:mx-auto px-8 max-xl:pb-24 max-xl:pl-8 w-full max-w-6xl h-full {%if page.has_header%} pt-24 xl:pt-48 {%else%} pt-8 {%endif%}"
       >
         {{content}}
       </main>

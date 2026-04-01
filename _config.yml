@@ -57,6 +57,10 @@ certificates:
     institute: Data Smart Point Academy GmbH Berlin
     link: "/src/certificates/MySQL Zertifikat.pdf"
     img: "/src/certificates/jpg/MySQL Zertifikat.jpg"
+  - name: Virtualisierung mit Docker [2026]
+    institute: LinkedIn Learning
+    link: "/src/certificates/Abschlusszertifikat_Docker.pdf"
+    img: "/src/certificates/jpg/Abschlusszertifikat_Docker.jpg"
 
 plugins:
   - jekyll-inline-svg

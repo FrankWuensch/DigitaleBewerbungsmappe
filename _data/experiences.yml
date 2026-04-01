@@ -43,15 +43,13 @@ further_education:
     city: "10719 Berlin"
     street: "Knesebeckstraße 62-63"
     info: |
-      - Erstellung von ETL-Workflows mit KNIME 
+      - Erstellung von ETL-Workflows mit KNIME
       - Datenvisualisierung und Analyse mit PowerBI
       - Durchführung eines vollständigen Analyseprojekts inkl. Präsentation
 companies:
   - name: "Industriemechaniker"
     year: "2015 - 2017"
     company: "Metabowerke GmbH & EFAS GmbH"
-    city: "72622 Nürtingen"
-    street: "Metabo-Allee 1"
     info: |
       - Montage und Fertigung mechanischer Baugruppen
       - Arbeiten nach technischen Zeichnungen
