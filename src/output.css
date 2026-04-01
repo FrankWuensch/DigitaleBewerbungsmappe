@@ -202,11 +202,17 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
   }
   .relative {
     position: relative;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
@@ -319,6 +325,12 @@
   .aspect-\[2\/3\] {
     aspect-ratio: 2/3;
   }
+  .aspect-\[2\/380\] {
+    aspect-ratio: 2/380;
+  }
+  .aspect-\[2\/\] {
+    aspect-ratio: 2/;
+  }
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -340,8 +352,14 @@
   .h-auto {
     height: auto;
   }
+  .h-fit {
+    height: fit-content;
+  }
   .h-full {
     height: 100%;
+  }
+  .h-max {
+    height: max-content;
   }
   .h-screen {
     height: 100vh;
@@ -370,11 +388,20 @@
   .w-\[70\%\] {
     width: 70%;
   }
+  .w-auto {
+    width: auto;
+  }
   .w-fit {
     width: fit-content;
   }
   .w-full {
     width: 100%;
+  }
+  .w-max {
+    width: max-content;
+  }
+  .w-min {
+    width: min-content;
   }
   .max-w-6xl {
     max-width: var(--container-6xl);
@@ -396,6 +423,9 @@
   }
   .shrink {
     flex-shrink: 1;
+  }
+  .flex-grow {
+    flex-grow: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -558,8 +588,14 @@
   .fill-current {
     fill: currentcolor;
   }
+  .\!object-cover {
+    object-fit: cover !important;
+  }
   .object-cover {
     object-fit: cover;
+  }
+  .\!object-center {
+    object-position: center !important;
   }
   .object-center {
     object-position: center;
@@ -614,6 +650,9 @@
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -732,9 +771,9 @@
       height: 80%;
     }
   }
-  .max-xl\:h-auto {
+  .max-xl\:h-\[80\] {
     @media (width < 80rem) {
-      height: auto;
+      height: 80;
     }
   }
   .max-xl\:w-\[80\%\] {
@@ -742,9 +781,19 @@
       width: 80%;
     }
   }
+  .max-xl\:w-\[80\] {
+    @media (width < 80rem) {
+      width: 80;
+    }
+  }
   .max-xl\:w-auto {
     @media (width < 80rem) {
       width: auto;
+    }
+  }
+  .max-xl\:w-full {
+    @media (width < 80rem) {
+      width: 100%;
     }
   }
   .max-xl\:pb-24 {

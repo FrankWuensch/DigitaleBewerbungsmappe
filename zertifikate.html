@@ -16,11 +16,11 @@ contact_data: Kontaktdaten
     <div id="certificates" class="w-full h-full overflow-y-auto">
         <div class="gap-x-4 gap-y-10 xl:gap-x-12 xl:gap-y-12 xl:gap-y-6 grid grid-cols-1 xl:grid-cols-3 pb-8 xl:pb-12">
             {% for cert in site.certificates reversed %}
-            <a href="{{ site.baseurl }}{{ cert.link }}" class="certificate">
-                <div class="max-xl:w-[80%] h-auto max-xl:h-[80%] aspect-[2/3]">
+            <a href="{{ site.baseurl }}{{ cert.link }}" class="max-xl:w-[80%] certificate">
+                <div class="h-fit aspect-[2/3]">
                     <img src="{{ site.baseurl }}{{ cert.img }}"
                         alt="{{ cert.name }}"
-                        class="xl:pb-3 border-2 border-cyan-800 w-full max-xl:w-auto h-full object-center object-cover"
+                        class="xl:pb-3 border-2 border-cyan-800 w-full h-full object-center object-cover"
                         loading="lazy">
                 </div>
                 <div class="pt-2 text-sm">{{ cert.name }}</div>
