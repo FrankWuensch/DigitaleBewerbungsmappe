@@ -53,6 +53,10 @@ certificates:
     institute: IHK Akademie Bayern [2025]
     link: /src/certificates/IHK_Data_Analyst_DSP.pdf
     img: /src/certificates/jpg/IHK_Data_Analyst_DSP.jpg
+  - name: Agiles Projektmanagement Zertifikat [2026]
+    institute: Data Smart Point Academy GmbH Berlin
+    link: "/src/certificates/Agiles Projektmanagement Zertifikat.pdf"
+    img: "/src/certificates/jpg/Agiles Projektmanagement Zertifikat.jpg"
   - name: DSP MySQL Zertifikat [2026]
     institute: Data Smart Point Academy GmbH Berlin
     link: "/src/certificates/MySQL Zertifikat.pdf"
@@ -61,10 +65,6 @@ certificates:
     institute: LinkedIn Learning
     link: "/src/certificates/Abschlusszertifikat_Docker.pdf"
     img: "/src/certificates/jpg/Abschlusszertifikat_Docker.jpg"
-  - name: Agiles Projektmanagement Zertifikat [2026]
-    institute: Data Smart Point Academy GmbH Berlin
-    link: "/src/certificates/Agiles Projektmanagement Zertifikat.pdf"
-    img: "/src/certificates/jpg/Agiles Projektmanagement Zertifikat.jpg"
 
 plugins:
   - jekyll-inline-svg
