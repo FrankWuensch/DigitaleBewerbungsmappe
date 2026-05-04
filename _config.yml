@@ -61,6 +61,10 @@ certificates:
     institute: LinkedIn Learning
     link: "/src/certificates/Abschlusszertifikat_Docker.pdf"
     img: "/src/certificates/jpg/Abschlusszertifikat_Docker.jpg"
+  - name: Agiles Projektmanagement Zertifikat [2026]
+    institute: Data Smart Point Academy GmbH Berlin
+    link: "/src/certificates/Agiles Projektmanagement Zertifikat.pdf"
+    img: "/src/certificates/jpg/Agiles Projektmanagement Zertifikat.jpg"
 
 plugins:
   - jekyll-inline-svg
