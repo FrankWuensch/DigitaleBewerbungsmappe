@@ -103,3 +103,7 @@ ul.company ul {
 #pers-info::-webkit-scrollbar {
   @apply hidden content-none;
 }
+
+#pers-info > img {
+  @apply pb-4 xl:pb-8 max-xl:max-h-40;
+}

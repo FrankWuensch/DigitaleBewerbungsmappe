@@ -16,3 +16,6 @@
 - label: address
   value: "Zementstr. 1/1, 73230 Kirchheim/Teck"
   icon: "/src/symbols/address.svg"
+- label: car
+  value: Klasse B - Auto vorhanden
+  icon: "/src/symbols/car.svg"

@@ -13,6 +13,7 @@ heading_2: Fort- und Weiterbildung
 heading_3: Ausbildung
 heading_4: Schulbildung
 heading_5: Hobbies / Ehrenamt
+heading_6: Sprachen
 summary_1: Tätigkeitsbeschreibung
 summary_2: Lerninhalte
 contact_data: Kontaktdaten
@@ -180,6 +181,17 @@ contact_data: Kontaktdaten
         {%endfor%} {%endif%}
         <br>
         {%endfor%}
+      </div>
+    </section>
+    <section class="snap-start w-full flex flex-col !mx-auto">
+      <h2 class="sticky-title">{{page.heading_6}}</h2>
+      <div
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+      >
+      {%for lang in site.data.languages%}
+      <div class="grid col-span-2 xl:col-span-1">{{lang.name}}</div>
+      <div class="grid col-span-3 xl:col-span-5">{{lang.level}}</div>
+      {%endfor%}
       </div>
       <br>
     </section>
