@@ -4,6 +4,9 @@
 - label: mail
   value: "[wuensch.frank@web.de](mailto:wuensch.frank@web.de)"
   icon: "/src/symbols/mail.svg"
+- label: birthday
+  value: 04.01.1995
+  icon: "/src/symbols/birthday.svg"
 - label: github
   value: "[Github Account](https://github.com/FrankWuensch)"
   icon: "/src/symbols/github.svg"

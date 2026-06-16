@@ -1,0 +1,28 @@
+- name: Kontrabass spielen
+  place:
+    - label: KlangkunstManufaktur Stuttgart e.V.
+      link: https://www.klangkunstmanufaktur.de
+      timespan: 2022 - jetzt
+    - label: Kammerorchester Wendlingen / Köngen
+      link: https://musikschule-k-w.de/unterricht/ensembles/
+      timespan: 2021 - jetzt
+    - label: Stadtkapelle Kirchheim
+      link: https://www.stakakirchheim.de/startseite.html
+      timespan: 2010 - 2021
+    - label: Symphonisches Jugend Blasorchester BW (SJBO)
+      link: https://www.sjbo.de/ueber-uns
+      timespan: 2013 - 2018
+- name: Ministranten St. Ulrich
+  place:
+    - label: Ministrant St. Ulrich Kirchheim
+      timespan: 2004 - 2013
+    - label: Gruppenleiter Ministranten Kirchheim
+      timespan: 2009 - 2013
+- name: Schwimmen
+  place:
+    - label: VfL Kirchheim Abt. Schwimmen
+      link: https://schwimmen-kirchheim.de/
+- name: Fahrrad fahren
+  place:
+    - label: Bike Blog FW
+      link: https://frankwuensch.github.io/bike-blog-fw/

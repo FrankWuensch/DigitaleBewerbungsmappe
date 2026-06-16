@@ -9,8 +9,10 @@ heading_sidebar_left: Persönliche Daten
 heading_sidebar_right: Referenzprojekte
 head_title: Lebenslauf
 heading_1: Praktische Erfahrung
-heading_2: Fort-und Weiterbildung
+heading_2: Fort- und Weiterbildung
 heading_3: Ausbildung
+heading_4: Schulbildung
+heading_5: Hobbies / Ehrenamt
 summary_1: Tätigkeitsbeschreibung
 summary_2: Lerninhalte
 contact_data: Kontaktdaten
@@ -25,8 +27,8 @@ contact_data: Kontaktdaten
       <div
         class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
       >
-        <div class="grid col-span-2 xl:col-span-1 date">
-          <div>{{comp.year}}</div>
+        <div class="grid col-span-2 xl:col-span-1">
+          <div class="date">{{comp.year}}</div>
         </div>
         <div class="grid col-span-3 xl:col-span-5">
           <h3>{{comp.name}}</h3>
@@ -75,8 +77,8 @@ contact_data: Kontaktdaten
       <div
         class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
       >
-        <div class="grid col-span-2 xl:col-span-1 date">
-          <div>{{ed.year}}</div>
+        <div class="grid col-span-2 xl:col-span-1">
+          <div class="date">{{ed.year}}</div>
         </div>
         <div class="grid col-span-3 xl:col-span-5">
           <h3>{{ed.name}}</h3>
@@ -121,9 +123,11 @@ contact_data: Kontaktdaten
     </section>
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_3}}</h2>
-      <div class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap">
-        <div class="grid col-span-2 xl:col-span-1 date">
-          <div>{{site.data.experiences.education[0].year}}</div>
+      <div
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+      >
+        <div class="grid col-span-2 xl:col-span-1">
+          <div class="date">{{site.data.experiences.education[0].year}}</div>
         </div>
         <div class="grid col-span-3 xl:col-span-5">
           <h3>{{site.data.experiences.education[0].name}}</h3>
@@ -131,6 +135,48 @@ contact_data: Kontaktdaten
           <div>{{site.data.experiences.education[0].street}}</div>
           <div>{{site.data.experiences.education[0].city}}</div>
         </div>
+      </div>
+    </section>
+    <section class="snap-start">
+      <h2 class="sticky-title">{{page.heading_4}}</h2>
+      <div
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+      >
+      {%for school in site.data.experiences.schools%}
+      <div class="grid col-span-2 xl:col-span-1 date">{{school.year}}</div>
+      <div class="grid col-span-3 xl:col-span-5">
+        <div class="flex flex-col">
+          <h3>{{school.name}}</h3>
+          <div>{{school.city}}</div>
+        </div>
+        <br>
+      </div>
+      {%endfor%}
+      </div>
+    </section>
+    <section class="snap-start">
+      <h2 class="sticky-title">{{page.heading_5}}</h2>
+      <div
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+      >
+        {%for hobby in site.data.hobbies%}
+        <h3 class="col-span-full">{{hobby.name}}</h3>
+        {%if hobby.place%} {%for item in hobby.place%} {%if item.timespan%}
+        <div class="col-span-2 date">{{item.timespan}}</div>
+        {%endif%}
+        {%if item.link%}
+        <a
+          href="{{item.link}}"
+          target="_blank"
+          class="{%if item.timespan%}col-span-3 xl:col-span-4{%else%}col-span-full{%endif%} w-fit after:no-underline! after:ml-2 after:content-['↗']"
+          >{{item.label}}</a
+        >
+        {%else%}
+        <div class="{%if item.timespan%}col-span-3 xl:col-span-4{%else%}col-span-full{%endif%}">{{item.label}}</div>
+        {%endif%}
+        {%endfor%} {%endif%}
+        <br>
+        {%endfor%}
       </div>
     </section>
   </div>

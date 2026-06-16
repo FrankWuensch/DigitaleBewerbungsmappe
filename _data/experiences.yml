@@ -1,3 +1,10 @@
+schools:
+  - name: Schlossgymnasium Kirchheim
+    city: 73230 Kirchheim/Teck
+    year: 2006 - 2008
+  - name: Teck Realschule, Mittlere Reife
+    city: 73230 Kirchheim/Teck
+    year: 2008 - 2011
 education:
   - name: "Industriemechaniker"
     year: "2011 - 2015"
