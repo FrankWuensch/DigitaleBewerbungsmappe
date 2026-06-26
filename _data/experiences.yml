@@ -1,10 +1,10 @@
 schools:
-  - name: Schlossgymnasium Kirchheim
-    city: 73230 Kirchheim/Teck
-    year: 2006 - 2008
   - name: Teck Realschule, Mittlere Reife
     city: 73230 Kirchheim/Teck
     year: 2008 - 2011
+  - name: Schlossgymnasium Kirchheim
+    city: 73230 Kirchheim/Teck
+    year: 2006 - 2008
 education:
   - name: "Industriemechaniker"
     year: "2011 - 2015"
@@ -12,7 +12,7 @@ education:
     city: "72622 Nürtingen"
     street: "Metabo-Allee 1"
 further_education:
-  - name: "Techniker Fachrichtung Mechatronik / Automatisierungstechnik"
+  - name: "Techniker Fachrichtung Mechatronik /<br> Automatisierungstechnik"
     year: "2017 - 2019"
     company: "Max-Eyth-Schule"
     city: "73230 Kirchheim/Teck"
@@ -35,7 +35,7 @@ further_education:
       - Objektorientierte Programmierung und GUI-Entwicklung (Qt-Creator)
       - Umsetzung praxisnaher Anwendungen
       - Fehleranalyse und strukturierte Softwareentwicklung
-  - name: "Python Programmierer Data Science und Machine Learning"
+  - name: "Python Programmierer Data Science /<br> Machine Learning"
     year: "2023 - 2024"
     company: "ILS Institut für Lernsysteme GmbH"
     city: "22143 Hamburg"
@@ -45,7 +45,7 @@ further_education:
       - Grundlagen der Statistik und Machine Learning
       - Verarbeitung und Visualisierung von Daten
   - name: "Data Analyst"
-    year: "2025"
+    year: "2025 - 2026"
     company: "Data Smart Point GmbH"
     city: "10719 Berlin"
     street: "Knesebeckstraße 62-63"
@@ -57,17 +57,16 @@ companies:
   - name: "Industriemechaniker"
     year: "2015 - 2017"
     company: "Metabowerke GmbH & EFAS GmbH"
-    info: |
-      - Montage und Fertigung mechanischer Baugruppen
-      - Arbeiten nach technischen Zeichnungen
-      - Grundkenntnisse in elektrischer Verkabelung
+    # info: |
+    #   - Montage und Fertigung mechanischer Baugruppen
+    #   - Arbeiten nach technischen Zeichnungen
+    #   - Grundkenntnisse in elektrischer Verkabelung
   - name: "Anlagenmonteur"
     year: "2020 - 2022"
     company: "Electronics GmbH"
     city: "73765 Neuhausen auf den Fildern"
     street: "Kirchstr. 53"
     info: |
-      - Aufbau und Inbetriebnahme von Messsystemen im Druckgussbereich
       - Fehleranalyse und Support vor Ort und per Fernwartung
       - Internationale Einsätze (FR, CZ, IT)
   - name: "Software-Entwickler"

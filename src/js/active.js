@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const references = document.querySelectorAll("nav a");
-    const indexLink = document.querySelector("#index");
-    const zertifikateLink = document.querySelector("#zertifikate");
-    
+    const indexLinks = document.querySelector(".index");
+    const certificateLinks = document.querySelector(".certificates");
+
     references.forEach(element => {
         // console.log(window.location.href, element.href);
         element.classList.remove("active");

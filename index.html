@@ -9,6 +9,8 @@ heading_sidebar_left: Persönliche Daten
 heading_sidebar_right: Referenzprojekte
 head_title: Lebenslauf
 heading_1: Praktische Erfahrung
+group_1: Software Entwickler / SPS Programmierung
+group_2: Industriemechaniker / Techniker
 heading_2: Fort- und Weiterbildung
 heading_3: Ausbildung
 heading_4: Schulbildung
@@ -26,17 +28,16 @@ contact_data: Kontaktdaten
       <h2 class="sticky-title">{{page.heading_1}}</h2>
       {%for comp in site.data.experiences.companies reversed%}
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
       >
         <div class="grid col-span-2 xl:col-span-1">
           <div class="date">{{comp.year}}</div>
         </div>
-        <div class="grid col-span-3 xl:col-span-5">
+        <div class="max-xl:hidden grid col-span-3 xl:col-span-5">
           <h3>{{comp.name}}</h3>
           <div>{{comp.company}}</div>
-          <div>{{comp.street}}</div>
-          <div>{{comp.city}}</div>
-          <div class="max-xl:hidden -mt-1">
+          <div>{{comp.street}}{%if comp.city%}, {{comp.city}}{%endif%}</div>
+          <div class="-mt-1">
             {%if comp.info%}
             <details class="comp">
               <summary>{{page.summary_1}}</summary>
@@ -53,41 +54,47 @@ contact_data: Kontaktdaten
         </div>
         <!-- smartphone -->
         <div
-          class="hidden max-xl:block col-span-full mx-auto -mt-3 w-full hyphens-auto"
+          class="hidden max-xl:block col-span-full mx-auto w-full hyphens-auto"
           lang="de"
         >
-          {%if comp.info%}
-          <details>
-            <summary>{{page.summary_1}}</summary>
-            <article class="pointer-events-auto">
-              <ul class="pointer-events-none list-none company">
-                {%for item in comp.info%}
-                <li>{{item | markdownify}}</li>
-                {%endfor%}
-              </ul>
-            </article>
-          </details>
-          {%endif%}
+          <h3>{{comp.name}}</h3>
+          <div>{{comp.company}}</div>
+          <div>{{comp.street}}{%if comp.city%}, {{comp.city}}{%endif%}</div>
+          <div class="-mt-1">
+            {%if comp.info%}
+            <details class="-mt-4">
+              <summary>{{page.summary_1}}</summary>
+              <article class="pointer-events-auto">
+                <ul class="pointer-events-none list-none company">
+                  {%for item in comp.info%}
+                  <li>{{item | markdownify}}</li>
+                  {%endfor%}
+                </ul>
+              </article>
+            </details>
+            {%endif%}
+          </div>
         </div>
       </div>
       {%endfor%}
       <br>
     </section>
+
     <section class="min-h-full snap-start">
       <h2 class="sticky-title">{{page.heading_2}}</h2>
       {%for ed in site.data.experiences.further_education reversed%}
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
       >
-        <div class="grid col-span-2 xl:col-span-1">
+        <div class="max-xl:hidden grid col-span-2 xl:col-span-1 -mt-1">
           <div class="date">{{ed.year}}</div>
         </div>
-        <div class="grid col-span-3 xl:col-span-5">
+        <div class="max-xl:hidden grid col-span-5">
+          <div class="date xl:hidden">{{ed.year}}</div>
           <h3>{{ed.name}}</h3>
           <div>{{ed.company}}</div>
-          <div>{{ed.street}}</div>
-          <div>{{ed.city}}</div>
-          <div class="max-xl:hidden -mt-1">
+          <div>{{ed.street}}{%if ed.city%}, {{ed.city}}{%endif%}</div>
+          <div class="-mt-1">
             {%if ed.info%}
             <details class="edjucation">
               <summary>{{page.summary_2}}</summary>
@@ -104,11 +111,15 @@ contact_data: Kontaktdaten
         </div>
         <!-- smartphone -->
         <div
-          class="hidden max-xl:block col-span-full -mt-3 w-full hyphens-auto"
+          class="hidden max-xl:block col-span-full mx-auto w-full hyphens-auto"
           lang="de"
         >
+          <div class="date">{{ed.year}}</div>
+          <h3>{{ed.name}}</h3>
+          <div>{{ed.company}}</div>
+          <div>{{ed.street}}{%if ed.city%}, {{ed.city}}{%endif%}</div>
           {%if ed.info%}
-          <details>
+          <details class="-mt-4">
             <summary>{{page.summary_2}}</summary>
             <article class="pointer-events-auto">
               <ul class="pointer-events-none list-none">
@@ -124,32 +135,35 @@ contact_data: Kontaktdaten
       {%endfor%}
       <br>
     </section>
+
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_3}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
       >
-        <div class="grid col-span-2 xl:col-span-1">
+        <div class="max-xl:hidden grid col-span-2 xl:col-span-1">
           <div class="date">{{site.data.experiences.education[0].year}}</div>
         </div>
         <div class="grid col-span-3 xl:col-span-5">
+          <div class="date xl:hidden">{{site.data.experiences.education[0].year}}</div>
           <h3>{{site.data.experiences.education[0].name}}</h3>
           <div>{{site.data.experiences.education[0].company}}</div>
-          <div>{{site.data.experiences.education[0].street}}</div>
-          <div>{{site.data.experiences.education[0].city}}</div>
+          <div>{{site.data.experiences.education[0].street}}, {{site.data.experiences.education[0].city}}</div>
         </div>
       </div>
       <br>
     </section>
+
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_4}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
       >
       {%for school in site.data.experiences.schools%}
-      <div class="grid col-span-2 xl:col-span-1 date">{{school.year}}</div>
-      <div class="grid col-span-3 xl:col-span-5">
+      <div class="max-xl:hidden grid col-span-2 xl:col-span-1 date">{{school.year}}</div>
+      <div class="grid col-span-full">
         <div class="flex flex-col">
+          <div class="date xl:hidden">{{school.year}}</div>
           <h3>{{school.name}}</h3>
           <div>{{school.city}}</div>
         </div>
@@ -158,10 +172,11 @@ contact_data: Kontaktdaten
       {%endfor%}
       </div>
     </section>
+
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_5}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
       >
         {%for hobby in site.data.hobbies%}
         <h3 class="col-span-full">{{hobby.name}}</h3>
@@ -183,10 +198,11 @@ contact_data: Kontaktdaten
         {%endfor%}
       </div>
     </section>
-    <section class="snap-start w-full flex flex-col !mx-auto">
+
+    <section class="snap-start w-full flex flex-col mx-auto!">
       <h2 class="sticky-title">{{page.heading_6}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
       >
       {%for lang in site.data.languages%}
       <div class="grid col-span-2 xl:col-span-1">{{lang.name}}</div>

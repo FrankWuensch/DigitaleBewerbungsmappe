@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const allArticles = Array.from(document.querySelectorAll("details article"));
 
-  const firstTwoDetails = Array.from(document.querySelectorAll(".comp")).filter(
-    (_, index) => index < 2
+  const openDetails = Array.from(document.querySelectorAll(".comp")).filter(
+    (_, index) => index == 1
   );
 
-  for (let detail of firstTwoDetails) {
+  for (let detail of openDetails) {
     detail.setAttribute("open", "");
   }
 

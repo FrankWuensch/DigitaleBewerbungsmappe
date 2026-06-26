@@ -10,17 +10,17 @@
                 {%svg {{site.menu_symbol}} class="mx-auto w-[70%] h-full text-neutral-700!"%}
             </div>
         </div>
-        <div id="menu-content" class="hidden 2xl:hidden top-20 right-0 z-30! fixed bg-neutral-200 opacity-0 rounded-bl-xl w-[65%] text-lg pointer-events-none">
-            <div class="flex flex-col divide-y-1 divide-neutral-700 w-full h-full">
-                <a href="{{site.baseurl}}/" id="index" class="px-3 py-5 cursor-pointer pointer-events-auto">Lebenslauf</a>
-                <a href="{{site.baseurl}}/zertifikate" id="zertifikate" class="px-3 py-5 cursor-pointer pointer-events-auto">Zertifikate</a>
+        <div id="menu-content" class="hidden 2xl:hidden top-20 right-0 z-30! fixed bg-yellow-50 opacity-0 rounded-bl-xl border-b border-l border-cyan-700! w-[65%] text-lg pointer-events-none">
+            <div class="flex flex-col divide-y-1 divide-neutral-400 w-full h-full">
+                <a href="{{site.baseurl}}/" class="px-3 py-5 cursor-pointer pointer-events-auto index">Lebenslauf</a>
+                <a href="{{site.baseurl}}/zertifikate" class="px-3 py-5 cursor-pointer pointer-events-auto certificates">Zertifikate</a>
                 <a href="#" id="referenz-projekte-small" class="px-3 py-5 cursor-pointer pointer-events-auto">Referenzprojekte</a>
             </div>
         </div>
         <!-- large screens -->
         <div class="max-2xl:hidden flex items-end gap-x-6 bg-inherit pr-8 pb-7 2xl:pb-12 h-full">
-            <a href="{{site.baseurl}}/" id="index" class="cursor-pointer pointer-events-auto">Lebenslauf</a>
-            <a href="{{site.baseurl}}/zertifikate" id="zertifikate" class="cursor-pointer pointer-events-auto">Zertifikate</a>
+            <a href="{{site.baseurl}}/" class="cursor-pointer pointer-events-auto index">Lebenslauf</a>
+            <a href="{{site.baseurl}}/zertifikate" class="cursor-pointer pointer-events-auto certificates">Zertifikate</a>
         </div>
     </nav>
 </header>
