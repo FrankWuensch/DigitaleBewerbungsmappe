@@ -13,7 +13,7 @@ h2 {
 }
 
 nav h2 {
-  @apply px-4 xl:px-8 font-['ZalandoSans'] xl:font-normal font-bold text-amber-600 text-base xl:text-xl;
+  @apply px-4 xl:px-8 font-['ZalandoSans'] xl:font-normal font-bold text-neutral-700 text-base xl:text-xl;
 }
 
 aside h2 {
@@ -21,7 +21,7 @@ aside h2 {
 }
 
 nav h2.italic {
-  @apply font-['ZalandoSans-Italic'] xl:font-normal font-bold text-amber-500 text-base xl:text-xl;
+  @apply font-['ZalandoSans-Italic'] xl:font-normal font-bold text-[#767676] text-base xl:text-xl;
 }
 
 nav a {
@@ -89,7 +89,7 @@ ul.company ul {
 }
 
 .sticky-title {
-  @apply top-0 sticky flex justify-center items-center bg-yellow-100 backdrop-blur-2xl p-2 xl:p-4 border-cyan-800 border-b-4 xl:border-b-6 rounded-b-2xl w-full;
+  @apply top-0 sticky flex justify-center items-center bg-[#C9D8EB] backdrop-blur-2xl p-2 xl:p-4 border-cyan-800 border-b-4 xl:border-b-6 rounded-b-2xl w-full;
 }
 
 .bg-sidebar {
