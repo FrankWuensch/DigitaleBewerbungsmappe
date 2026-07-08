@@ -27,20 +27,20 @@ summary_2: Lerninhalte
 contact_data: Kontaktdaten
 ---
 
-<div class="pb-8 xl:pb-16 w-full h-full">
+<div class="flex flex-col w-full h-full">
   <p class="py-4 mt-2">{{page.positioning}}</p>
-  <h1 class="h-12 xl:h-16">{{page.head_title}}</h1>
-  <div class="w-full h-full overflow-y-auto snap-mandatory snap-y">
+  <h1 class="h-12 2xl:h-16 shrink-0">{{page.head_title}}</h1>
+  <div class="flex-1 overflow-y-auto snap-mandatory snap-y">
     <section class="min-h-full snap-start">
       <h2 class="sticky-title">{{page.heading_1}}</h2>
       {%for comp in site.data.experiences.companies reversed%}
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
+        class="grid grid-cols-5 2xl:grid-cols-6 w-full scroll-mt-14 2xl:scroll-mt-24 snap-always snap-start col-gap"
       >
-        <div class="grid col-span-2 xl:col-span-1">
+        <div class="grid col-span-2 2xl:col-span-1">
           <div class="date">{{comp.year}}</div>
         </div>
-        <div class="max-xl:hidden grid col-span-3 xl:col-span-5">
+        <div class="max-2xl:hidden grid col-span-3 2xl:col-span-5">
           <h3>{{comp.name}}</h3>
           <div>{{comp.company}}</div>
           <div>{{comp.street}}{%if comp.city%}, {{comp.city}}{%endif%}</div>
@@ -61,7 +61,7 @@ contact_data: Kontaktdaten
         </div>
         <!-- smartphone -->
         <div
-          class="hidden max-xl:block col-span-full mx-auto w-full hyphens-auto"
+          class="hidden max-2xl:block col-span-full mx-auto w-full hyphens-auto"
           lang="de"
         >
           <h3>{{comp.name}}</h3>
@@ -91,13 +91,13 @@ contact_data: Kontaktdaten
       <h2 class="sticky-title">{{page.heading_2}}</h2>
       {%for ed in site.data.experiences.further_education reversed%}
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
+        class="grid grid-cols-5 2xl:grid-cols-6 w-full scroll-mt-14 2xl:scroll-mt-24 snap-always snap-start col-gap"
       >
-        <div class="max-xl:hidden grid col-span-2 xl:col-span-1 -mt-1">
+        <div class="max-2xl:hidden grid col-span-2 2xl:col-span-1 -mt-1">
           <div class="date">{{ed.year}}</div>
         </div>
-        <div class="max-xl:hidden grid col-span-5">
-          <div class="date xl:hidden">{{ed.year}}</div>
+        <div class="max-2xl:hidden grid col-span-5">
+          <div class="date 2xl:hidden">{{ed.year}}</div>
           <h3>{{ed.name}}</h3>
           <div>{{ed.company}}</div>
           <div>{{ed.street}}{%if ed.city%}, {{ed.city}}{%endif%}</div>
@@ -118,7 +118,7 @@ contact_data: Kontaktdaten
         </div>
         <!-- smartphone -->
         <div
-          class="hidden max-xl:block col-span-full mx-auto w-full hyphens-auto"
+          class="hidden max-2xl:block col-span-full mx-auto w-full hyphens-auto"
           lang="de"
         >
           <div class="date">{{ed.year}}</div>
@@ -146,13 +146,13 @@ contact_data: Kontaktdaten
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_3}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
+        class="grid grid-cols-5 2xl:grid-cols-6 w-full scroll-mt-14 2xl:scroll-mt-24 snap-always snap-start col-gap"
       >
-        <div class="max-xl:hidden grid col-span-2 xl:col-span-1">
+        <div class="max-2xl:hidden grid col-span-2 2xl:col-span-1">
           <div class="date">{{site.data.experiences.education[0].year}}</div>
         </div>
-        <div class="grid col-span-3 xl:col-span-5">
-          <div class="date xl:hidden">{{site.data.experiences.education[0].year}}</div>
+        <div class="grid col-span-3 2xl:col-span-5">
+          <div class="date 2xl:hidden">{{site.data.experiences.education[0].year}}</div>
           <h3>{{site.data.experiences.education[0].name}}</h3>
           <div>{{site.data.experiences.education[0].company}}</div>
           <div>{{site.data.experiences.education[0].street}}, {{site.data.experiences.education[0].city}}</div>
@@ -164,13 +164,13 @@ contact_data: Kontaktdaten
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_4}}</h2>
       <div
-        class="grid grid-cols-5 w-full scroll-mt-14 xl:scroll-mt-20 snap-always snap-start col-gap"
+        class="grid grid-cols-5 w-full scroll-mt-14 2xl:scroll-mt-20 snap-always snap-start col-gap"
       >
       {%for school in site.data.experiences.schools%}
-      <div class="max-xl:hidden grid col-span-2 xl:col-span-1 date">{{school.year}}</div>
+      <div class="max-2xl:hidden grid col-span-2 2xl:col-span-1 date">{{school.year}}</div>
       <div class="grid col-span-full">
         <div class="flex flex-col">
-          <div class="date xl:hidden">{{school.year}}</div>
+          <div class="date 2xl:hidden">{{school.year}}</div>
           <h3>{{school.name}}</h3>
           <div>{{school.city}}</div>
         </div>
@@ -183,7 +183,7 @@ contact_data: Kontaktdaten
     <section class="snap-start">
       <h2 class="sticky-title">{{page.heading_5}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
+        class="grid grid-cols-5 2xl:grid-cols-6 w-full scroll-mt-14 2xl:scroll-mt-24 snap-always snap-start col-gap"
       >
         {%for hobby in site.data.hobbies%}
         <h3 class="col-span-full">{{hobby.name}}</h3>
@@ -194,11 +194,11 @@ contact_data: Kontaktdaten
         <a
           href="{{item.link}}"
           target="_blank"
-          class="{%if item.timespan%}col-span-3 xl:col-span-4{%else%}col-span-full{%endif%} w-fit after:no-underline! after:ml-2 after:content-['↗']"
+          class="{%if item.timespan%}col-span-3 2xl:col-span-4{%else%}col-span-full{%endif%} w-fit after:no-underline! after:ml-2 after:content-['↗']"
           >{{item.label}}</a
         >
         {%else%}
-        <div class="{%if item.timespan%}col-span-3 xl:col-span-4{%else%}col-span-full{%endif%}">{{item.label}}</div>
+        <div class="{%if item.timespan%}col-span-3 2xl:col-span-4{%else%}col-span-full{%endif%}">{{item.label}}</div>
         {%endif%}
         {%endfor%} {%endif%}
         <br>
@@ -209,11 +209,11 @@ contact_data: Kontaktdaten
     <section class="snap-start w-full flex flex-col mx-auto!">
       <h2 class="sticky-title">{{page.heading_6}}</h2>
       <div
-        class="grid grid-cols-5 xl:grid-cols-6 w-full scroll-mt-14 xl:scroll-mt-24 snap-always snap-start col-gap"
+        class="grid grid-cols-5 2xl:grid-cols-6 w-full scroll-mt-14 2xl:scroll-mt-24 snap-always snap-start col-gap"
       >
       {%for lang in site.data.languages%}
-      <div class="grid col-span-2 xl:col-span-1">{{lang.name}}</div>
-      <div class="grid col-span-3 xl:col-span-5">{{lang.level}}</div>
+      <div class="grid col-span-2 2xl:col-span-1">{{lang.name}}</div>
+      <div class="grid col-span-3 2xl:col-span-5">{{lang.level}}</div>
       {%endfor%}
       </div>
       <br>
