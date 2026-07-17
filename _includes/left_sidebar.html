@@ -9,7 +9,7 @@
   {%for data in site.data.personal%}
   <div class="grid grid-cols-5 max-xl:my-auto py-0.5 xl:py-2 w-fill">
     <div class="col-span-1 {%if data.icon%} block {%else%} opacity-0 {%endif%}">
-      {%svg {{data.icon}} class="w-4 xl:w-6 h-4 xl:h-6 text-amber-200"%}
+      {%svg {{data.icon}} class="w-4 xl:w-6 h-4 xl:h-6 text-[#D6E4F4]"%}
     </div>
     {%if data.value contains "https://" or data.value contains "mailto"%}
     <div class="col-span-4 pointer-events-auto">{{data.value | markdownify}}</div>

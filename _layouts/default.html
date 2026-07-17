@@ -26,6 +26,7 @@
     {%if page.has_header%} {%include header.html%} {%endif%}
     <div class="flex flex-row bg-white w-full h-full">
       <aside
+        aria-label="left-sidebar"
         class="z-20 max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mt-20 xl:mt-40"
       >
         {%include left_sidebar.html%}
@@ -36,7 +37,7 @@
       >
         {{content}}
       </main>
-      <aside id="right-sidebar"
+      <aside id="right-sidebar" aria-label="right-sidebar"
         class="z-20 max-2xl:hidden {%if page.has_sidebar_left%} bg-sidebar {%else%} opacity-0 {%endif%} flex-1 mt-20 xl:mt-40"
       >
         {%include right_sidebar.html%}
@@ -58,12 +59,14 @@
     </div>
     <aside
       id="left-sidebar-small"
+      aria-label="left-sidebar-small"
       class="top-1/2 left-0 z-20 isolate fixed bg-sidebar opacity-0 rounded-r-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 pointer-events-none transform"
     >
       {%include left_sidebar.html%}
     </aside>
     <aside
       id="right-sidebar-small"
+      aria-label="right-sidebar-small"
       class="top-1/2 right-0 z-20 isolate fixed bg-sidebar opacity-0 rounded-l-lg w-2/3 h-2/3 transition-all -translate-y-1/2 duration-700 delay-200 pointer-events-none transform"
     >
       {%include right_sidebar.html%}
