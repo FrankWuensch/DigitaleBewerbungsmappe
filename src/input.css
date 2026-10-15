@@ -80,6 +80,13 @@ ul.company ul {
   @apply ml-2.5 pl-2 list-disc list-outside;
 }
 
+.focus-data [data-focus]:not([data-focus~="data"]),
+.focus-it [data-focus]:not([data-focus~="it"]),
+.focus-sps [data-focus]:not([data-focus~="sps"]),
+.focus-default [data-focus]:not([data-focus~="default"]) {
+    @apply hidden;
+}
+
 .date {
   @apply font-['Spectral-ExtraLight'];
 }

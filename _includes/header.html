@@ -1,42 +1,70 @@
 <header class="top-0 left-0 z-10 fixed w-full">
     <div class="bg-[#C9D8EB]/20 border-b-2 border-b-cyan-800">
-        <nav class="max-2xl:relative flex justify-between mx-auto w-full 2xl:max-w-6xl h-16 2xl:h-40">
+        <nav class="max-2xl:relative flex justify-between items-center mx-auto w-full 2xl:max-w-6xl h-16 2xl:h-40">
+
             <div class="flex flex-col justify-center px-4 2xl:px-0 w-full">
                 <h2>{{page.header_title_1}}</h2>
                 <h2 class="italic max-2xl:hidden">
-                    {{page.header_title_2}}
+                    <span data-focus="default">{{page.header_title_2.default}}</span>
+                    <span data-focus="it">{{page.header_title_2.it}}</span>
+                    <span data-focus="sps">{{page.header_title_2.sps}}</span>
+                    <span data-focus="data">{{page.header_title_2.data}}</span>
                 </h2>
             </div>
+
             <!-- small screens -->
-            <div class="2xl:hidden flex items-center bg-white/50 w-16 h-16">
+            <div class="2xl:hidden flex items-center bg-white/50 w-16 h-16 shrink-0">
                 <div id="menu-button" class="w-full">
                     {%svg {{site.menu_symbol}} class="mx-auto w-[70%] h-full text-neutral-700!"%}
                 </div>
             </div>
+
             <!-- large screens -->
-            <div class="max-2xl:hidden flex items-end gap-x-6 pr-8 pb-7 2xl:pb-12 h-full">
-                <a href="{{site.baseurl}}/" class="cursor-pointer pointer-events-auto index">Lebenslauf</a>
-                <a href="{{site.baseurl}}/zertifikate" class="cursor-pointer pointer-events-auto certificates">Zertifikate</a>
+            <div class="max-2xl:hidden flex items-center gap-x-6 pr-8 h-full shrink-0">
+                <a href="{{site.baseurl}}/" class="cursor-pointer pointer-events-auto index">
+                    Lebenslauf
+                </a>
+                <a href="{{site.baseurl}}/zertifikate" class="cursor-pointer pointer-events-auto certificates">
+                    Zertifikate
+                </a>
             </div>
+
         </nav>
+
         <!-- additional line - mobile only -->
         <div class="2xl:hidden px-8 py-2 bg-neutral-100">
             <p class="text-xs italic">
-                {{page.header_title_2}}
+                <span data-focus="default">{{page.header_title_2.default}}</span>
+                <span data-focus="it">{{page.header_title_2.it}}</span>
+                <span data-focus="sps">{{page.header_title_2.sps}}</span>
+                <span data-focus="data">{{page.header_title_2.data}}</span>
             </p>
         </div>
     </div>
+
     <!-- menu -->
-    <div id="menu-content"
-         class="hidden 2xl:hidden absolute right-0 top-full z-30 bg-neutral-100 opacity-0 rounded-bl-xl border-b border-l border-cyan-800 w-[65%] text-lg pointer-events-none">
+    <div
+        id="menu-content"
+        class="hidden 2xl:hidden absolute right-0 top-full z-30 bg-neutral-100 opacity-0 rounded-bl-xl border-b border-l border-cyan-800 w-[65%] text-lg pointer-events-none"
+    >
         <div class="flex flex-col divide-y divide-neutral-400 w-full">
-            <a href="{{site.baseurl}}/" class="px-3 py-5 cursor-pointer pointer-events-auto index">
+            <a
+                href="{{site.baseurl}}/"
+                class="px-3 py-5 cursor-pointer pointer-events-auto index"
+            >
                 Lebenslauf
             </a>
-            <a href="{{site.baseurl}}/zertifikate" class="px-3 py-5 cursor-pointer pointer-events-auto certificates">
+            <a
+                href="{{site.baseurl}}/zertifikate"
+                class="px-3 py-5 cursor-pointer pointer-events-auto certificates"
+            >
                 Zertifikate
             </a>
-            <a href="#" id="referenz-projekte-small" class="px-3 py-5 cursor-pointer pointer-events-auto">
+            <a
+                href="#"
+                id="referenz-projekte-small"
+                class="px-3 py-5 cursor-pointer pointer-events-auto"
+            >
                 Referenzprojekte
             </a>
         </div>

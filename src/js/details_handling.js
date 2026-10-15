@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   const allArticles = Array.from(document.querySelectorAll("details article"));
 
-  const openDetails = Array.from(document.querySelectorAll(".comp")).filter(
-    (_, index) => index == 1
-  );
+  const params = new URLSearchParams(window.location.search);
+  const focus = params.get("focus");
+
+  const openDetails = Array.from(
+    document.querySelectorAll(".comp[data-focus-open]")
+  ).filter((detail) => {
+    const focuses = detail.dataset.focusOpen.split(" ");
+
+    return focuses.includes(focus);
+  });
 
   for (let detail of openDetails) {
     detail.setAttribute("open", "");

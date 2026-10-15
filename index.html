@@ -1,19 +1,42 @@
 ---
 layout: default
 header_title_1: Frank Wünsch
-header_title_2: Python • Django • RestAPI • Datenanalyse • Android App Entwicklung
+header_title_2:
+  default: Python • Django • REST API • Datenanalyse • Android App Entwicklung
+  it: Python • Django • REST API • Fullstack • Softwareentwicklung
+  sps: SPS • Siemens TIA Portal • WinCC • Mechatronik • Automatisierungstechnik
+  data: Python • SQL • Datenanalyse • Power BI • Data Science • Machine Learning
 has_header: yes
 has_sidebar_left: yes
 has_sidebar_right: yes
 heading_sidebar_left: Persönliche Daten
 heading_sidebar_right: Referenzprojekte
 head_title: Lebenslauf
-positioning: >
-  Ich entwickle datengetriebene Softwarelösungen - von Backend-Services über
-  Weboberflächen bis hin zur Datenanalyse und mobilen Anwendungen. Durch meinen
-  Hintergrund in Mechatronik und Automatisierung sowie meiner Weiterbildung zum
-  Techniker kann ich technische Prozesse schnell verstehen und in praxisnahe
-  Software umsetzen.
+positioning:
+  default: >
+    Ich entwickle datengetriebene Softwarelösungen - von Backend-Services über
+    Weboberflächen bis hin zur Datenanalyse und mobilen Anwendungen. Mein
+    Hintergrund in Mechatronik und Automatisierung sowie meine Weiterbildung zum
+    Techniker ermöglichen es mir, technische Prozesse schnell zu verstehen und
+    in praxisnahe Softwarelösungen zu überführen.
+  it: >
+    Ich entwickle robuste Softwarelösungen mit Schwerpunkt auf Fullstack-
+    Entwicklung, Backend-Services und Webanwendungen. Meine Erfahrung mit
+    Django und Python wird durch Kenntnisse in FastAPI, REST APIs, SQL sowie
+    modernen Frontend-Technologien ergänzt. Dabei verbinde ich Softwareentwicklung
+    mit meinem technischen Hintergrund in Mechatronik und Automatisierung.
+  sps: >
+    SPS-Programmierer mit erfolgreich abgeschlossenem Fernlehrgang zur SPS
+    Fachkraft. Fortgeschrittene Kenntnisse und praktische Erfahrung mit Siemens
+    TIA Portal und WinCC HMI-Visualisierung. Mechatronische Kenntnisse durch meine
+    Weiterbildung zum Techniker der Fachrichtung Mechatronik / Automatisierungstechnik.
+    Ergänzt durch ausgeprägte analytische Fähigkeiten aus der Fehleranalyse und -behebung
+    sowie meiner Weiterbildung zum Data Analyst mit IHK Zertifikat.
+  data: >
+      Fullstack-Entwickler mit Schwerpunkt auf Datenanalyse und datengetriebenen
+      Anwendungen. Fundierte Kenntnisse in SQL und Python sowie Erfahrung mit
+      MySQL, KNIME und Power BI. Ergänzt durch eine Weiterbildung im Bereich Data
+      Science und Machine Learning.
 heading_1: Praktische Erfahrung
 group_1: Software Entwickler / SPS Programmierung
 group_2: Industriemechaniker / Techniker
@@ -28,7 +51,12 @@ contact_data: Kontaktdaten
 ---
 
 <div class="flex flex-col w-full h-full">
-  <p class="py-4 mt-2 hyphens-auto max-2xl:text-justify">{{page.positioning}}</p>
+  <p class="py-4 mt-2 hyphens-auto max-2xl:text-justify">
+      <span data-focus="default">{{page.positioning.default}}</span>
+      <span data-focus="it">{{page.positioning.it}}</span>
+      <span data-focus="sps">{{page.positioning.sps}}</span>
+      <span data-focus="data">{{page.positioning.data}}</span>
+  </p>
   <h1 class="h-12 2xl:h-16 shrink-0">{{page.head_title}}</h1>
   <div class="flex-1 overflow-y-auto snap-mandatory snap-y">
     <section class="min-h-full snap-start">
@@ -46,7 +74,7 @@ contact_data: Kontaktdaten
           <div>{{comp.street}}{%if comp.city%}, {{comp.city}}{%endif%}</div>
           <div class="-mt-1">
             {%if comp.info%}
-            <details class="comp">
+            <details class="comp" data-focus="{{comp.open | join: ' '}}">
               <summary>{{page.summary_1}}</summary>
               <article class="pointer-events-auto">
                 <ul class="pointer-events-none list-none company">
@@ -69,7 +97,7 @@ contact_data: Kontaktdaten
           <div>{{comp.street}}{%if comp.city%}, {{comp.city}}{%endif%}</div>
           <div class="-mt-1">
             {%if comp.info%}
-            <details class="-mt-4">
+            <details class="-mt-4" data-focus="{{comp.open | join: ' '}}">
               <summary>{{page.summary_1}}</summary>
               <article class="pointer-events-auto">
                 <ul class="pointer-events-none list-none company">
@@ -103,7 +131,7 @@ contact_data: Kontaktdaten
           <div>{{ed.street}}{%if ed.city%}, {{ed.city}}{%endif%}</div>
           <div class="-mt-1">
             {%if ed.info%}
-            <details class="edjucation">
+            <details class="edjucation" data-focus="{{ed.open | join: ' '}}">
               <summary>{{page.summary_2}}</summary>
               <article class="pointer-events-auto">
                 <ul class="pointer-events-none list-none">
@@ -126,7 +154,7 @@ contact_data: Kontaktdaten
           <div>{{ed.company}}</div>
           <div>{{ed.street}}{%if ed.city%}, {{ed.city}}{%endif%}</div>
           {%if ed.info%}
-          <details class="-mt-4">
+          <details class="-mt-4" data-focus="{{ed.open | join: ' '}}">
             <summary>{{page.summary_2}}</summary>
             <article class="pointer-events-auto">
               <ul class="pointer-events-none list-none">
@@ -152,10 +180,15 @@ contact_data: Kontaktdaten
           <div class="date">{{site.data.experiences.education[0].year}}</div>
         </div>
         <div class="grid col-span-3 2xl:col-span-5">
-          <div class="date 2xl:hidden">{{site.data.experiences.education[0].year}}</div>
+          <div class="date 2xl:hidden">
+            {{site.data.experiences.education[0].year}}
+          </div>
           <h3>{{site.data.experiences.education[0].name}}</h3>
           <div>{{site.data.experiences.education[0].company}}</div>
-          <div>{{site.data.experiences.education[0].street}}, {{site.data.experiences.education[0].city}}</div>
+          <div>
+            {{site.data.experiences.education[0].street}},
+            {{site.data.experiences.education[0].city}}
+          </div>
         </div>
       </div>
       <br>
@@ -166,17 +199,19 @@ contact_data: Kontaktdaten
       <div
         class="grid grid-cols-5 w-full scroll-mt-14 2xl:scroll-mt-20 snap-always snap-start col-gap"
       >
-      {%for school in site.data.experiences.schools%}
-      <div class="max-2xl:hidden grid col-span-2 2xl:col-span-1 date">{{school.year}}</div>
-      <div class="grid col-span-full">
-        <div class="flex flex-col">
-          <div class="date 2xl:hidden">{{school.year}}</div>
-          <h3>{{school.name}}</h3>
-          <div>{{school.city}}</div>
+        {%for school in site.data.experiences.schools%}
+        <div class="max-2xl:hidden grid col-span-2 2xl:col-span-1 date">
+          {{school.year}}
         </div>
-        <br>
-      </div>
-      {%endfor%}
+        <div class="grid col-span-full">
+          <div class="flex flex-col">
+            <div class="date 2xl:hidden">{{school.year}}</div>
+            <h3>{{school.name}}</h3>
+            <div>{{school.city}}</div>
+          </div>
+          <br>
+        </div>
+        {%endfor%}
       </div>
     </section>
 
@@ -189,8 +224,7 @@ contact_data: Kontaktdaten
         <h3 class="col-span-full">{{hobby.name}}</h3>
         {%if hobby.place%} {%for item in hobby.place%} {%if item.timespan%}
         <div class="col-span-2 date">{{item.timespan}}</div>
-        {%endif%}
-        {%if item.link%}
+        {%endif%} {%if item.link%}
         <a
           href="{{item.link}}"
           target="_blank"
@@ -198,9 +232,12 @@ contact_data: Kontaktdaten
           >{{item.label}}</a
         >
         {%else%}
-        <div class="{%if item.timespan%}col-span-3 2xl:col-span-4{%else%}col-span-full{%endif%}">{{item.label}}</div>
-        {%endif%}
-        {%endfor%} {%endif%}
+        <div
+          class="{%if item.timespan%}col-span-3 2xl:col-span-4{%else%}col-span-full{%endif%}"
+        >
+          {{item.label}}
+        </div>
+        {%endif%} {%endfor%} {%endif%}
         <br>
         {%endfor%}
       </div>
@@ -211,10 +248,10 @@ contact_data: Kontaktdaten
       <div
         class="grid grid-cols-5 2xl:grid-cols-6 w-full scroll-mt-14 2xl:scroll-mt-24 snap-always snap-start col-gap"
       >
-      {%for lang in site.data.languages%}
-      <div class="grid col-span-2 2xl:col-span-1">{{lang.name}}</div>
-      <div class="grid col-span-3 2xl:col-span-5">{{lang.level}}</div>
-      {%endfor%}
+        {%for lang in site.data.languages%}
+        <div class="grid col-span-2 2xl:col-span-1">{{lang.name}}</div>
+        <div class="grid col-span-3 2xl:col-span-5">{{lang.level}}</div>
+        {%endfor%}
       </div>
       <br>
     </section>
